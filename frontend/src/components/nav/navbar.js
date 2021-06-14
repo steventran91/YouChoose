@@ -36,7 +36,7 @@ class NavBar extends React.Component {
         return (
             <div>
                 <h1>You Choose</h1>
-                { this.getLinks()}
+                {this.getLinks()}
             </div>
         );
     }
