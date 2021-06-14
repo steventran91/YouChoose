@@ -18,7 +18,7 @@ class SignupForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.signedIn === true) {
-      this.props.history.push("/login");
+      this.props.history.push("/wheel");
     }
 
     this.setState({ errors: nextProps.errors });
@@ -70,7 +70,7 @@ class SignupForm extends React.Component {
               type="text"
               value={this.state.username}
               onChange={this.update("username")}
-              placeholder="username"
+              placeholder="Username"
             />
             <br />
             <input

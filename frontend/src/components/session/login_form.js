@@ -40,6 +40,7 @@ class LoginForm extends React.Component {
 
     let user = {
       username: this.state.username,
+      email: this.state.email,
       password: this.state.password,
     };
 
@@ -64,9 +65,9 @@ class LoginForm extends React.Component {
           <div>
             <input
               type="text"
-              value={this.state.username}
-              onChange={this.update("username")}
-              placeholder="Username"
+              value={this.state.email}
+              onChange={this.update("email")}
+              placeholder="Email"
             />
             <br />
             <input
