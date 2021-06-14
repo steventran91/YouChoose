@@ -1,0 +1,5 @@
+#root {
+    background-color: rgb(221, 221, 255);
+    display: flex;
+    flex-direction: column;
+}
