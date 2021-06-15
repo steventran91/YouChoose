@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { getRestaurants } from "../../actions/restaurant_actions";
+import { fetchRestaurants } from "../../actions/restaurant_actions";
 
 import RestaurantList from "./restaurant_list";
 

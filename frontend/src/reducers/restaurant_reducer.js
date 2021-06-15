@@ -6,7 +6,7 @@ const RestaurantReducer = (state = {}, action) => {
 
     switch(action.type){
         case RECEIVE_RESTAURANTS:
-            action.restaurants
+            return action.restaurants
         case RECEIVE_RESTAURANT:
             return newState[action.restaurant.id] = action.restaurant
         default:

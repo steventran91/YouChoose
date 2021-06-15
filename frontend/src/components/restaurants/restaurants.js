@@ -9,12 +9,14 @@ class Restaurant extends React.Component {
     }
 
     render(){
-        <div className="restaurant-template">
-            <p>{this.props.name}</p>
-            <p>{this.props.description}</p>
-            <p>{this.props.category}</p>
-            <p>{this.props.rating}</p>
-        </div>
+        return(
+            <div className="restaurant-template">
+                <p>{this.props.name}</p>
+                <p>{this.props.description}</p>
+                <p>{this.props.category}</p>
+                <p>{this.props.rating}</p>
+            </div>
+        )
     }
 }
 
