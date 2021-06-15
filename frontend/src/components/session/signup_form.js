@@ -56,39 +56,55 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div className="signup-form-container">
+        <h1 className="signup-form-header">Create a New Account!</h1>
         <form onSubmit={this.handleSubmit}>
           <div className="signup-form">
             <br />
             <input
+              className="signup-input"
               type="text"
               value={this.state.email}
               onChange={this.update("email")}
               placeholder="Email"
             />
             <br />
+            <br />
             <input
+              className="signup-input"
               type="text"
               value={this.state.username}
               onChange={this.update("username")}
               placeholder="Username"
             />
             <br />
+            <br />
             <input
+              className="signup-input"
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
               placeholder="Password"
             />
             <br />
+            <br />
             <input
+              className="signup-input"
               type="password"
               value={this.state.password2}
               onChange={this.update("password2")}
               placeholder="Confirm Password"
             />
             <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+            <br />
+            <input className="session-submit" type="submit" value="Sign Up" />
+            <br />
+
+            <p className="policy-paragraph">We may use your email and devices for updates and tips on YouChoose's
+              products and services and for activities notifications. You can unsubscribe
+              for free at any time in your notification settings. We may use information
+              you provide us in order to show you targeted ads as described in our Privacy Policy.</p>
+            
+            <div className="errors">{this.renderErrors()}</div>
           </div>
         </form>
       </div>

@@ -60,25 +60,38 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
+      <div className="login-form-container">
+        <h1 className="signup-form-header">Login</h1>
+        <form className="login-form-box" onSubmit={this.handleSubmit}>
+          <br />
+          <div className="login-form">
             <input
+              className="login-input"
               type="text"
               value={this.state.email}
               onChange={this.update("email")}
               placeholder="Email"
             />
             <br />
+            <br />
             <input
+              className="login-input"
               type="password"
               value={this.state.password}
               onChange={this.update("password")}
               placeholder="Password"
             />
             <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+            <br />
+            <input className="session-submit" type="submit" value="Login" />
+            <br />
+
+            <p className="policy-paragraph">We may use your email and devices for updates and tips on YouChoose's
+              products and services and for activities notifications. You can unsubscribe
+              for free at any time in your notification settings. We may use information
+              you provide us in order to show you targeted ads as described in our Privacy Policy.</p>
+            
+            <div className="errors">{this.renderErrors()}</div>
           </div>
         </form>
       </div>

@@ -6,7 +6,7 @@ class NavBar extends React.Component {
     constructor(props) {
         super(props);
         this.logoutUser = this.logoutUser.bind(this);
-        this.getLinks = this.getLinks.bind(this);
+        // this.getLinks = this.getLinks.bind(this);
     }
 
     logoutUser(e) {
@@ -15,28 +15,53 @@ class NavBar extends React.Component {
     }
 
     // Selectively render links dependent on whether the user is logged in
-    getLinks() {
+    // getLinks() {
+    //     let display;
+    //     if (this.props.loggedIn) {
+    //         return display = (
+    //             <div className="loggedin-right">
+    //                 <button onClick={this.logoutUser}>Logout</button>
+    //             </div>
+    //         );
+    //     } else {
+    //         return display = (
+    //             <div className="login-buttons">
+    //                 <Link className="signup-button" to={'/signup'}>Signup</Link>
+    //                 <br />
+    //                 <Link className="loginup-button" to={'/login'}>Login</Link>
+    //             </div>
+    //         );
+    //     }
+    // }
+
+    render() {
+        let display;
         if (this.props.loggedIn) {
-            return (
-                <div>
-                    <button onClick={this.logoutUser}>Logout</button>
+            display = (
+                <div className="loggedin-right">
+                    <button className="logout-button" onClick={this.logoutUser}>Logout</button>
                 </div>
             );
         } else {
-            return (
-                <div>
-                    <Link to={'/signup'}>Signup</Link>
-                    <Link to={'/login'}>Login</Link>
+            display = (
+                <div className="login-buttons">
+                    <Link className="signup-button" to={'/signup'}>Sign Up</Link>
+                    <br />
+                    <Link className="login-button" to={'/login'}>Login</Link>
                 </div>
             );
         }
-    }
 
-    render() {
         return (
-            <div>
-                <h1>You Choose</h1>
-                {this.getLinks()}
+            <div className="navbar">
+                <div className="navbar-left">
+                    <h1 className="youchoose">YouChoose</h1>
+                    <Link className="home-button" to={'/'}>Home</Link>
+                </div>
+
+                <div className="navbar-right">
+                    {display}
+                </div>
             </div>
         );
     }
