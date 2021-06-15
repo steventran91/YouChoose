@@ -9,7 +9,7 @@ const mSTP = (state) => ({
 
 const mDTP = (dispatch) => {
   return {
-    getRestaurants: (restaurants) => dispatch(getRestaurants(restaurants)),
+    fetchRestaurants: () => dispatch(fetchRestaurants()),
   };
 };
 
