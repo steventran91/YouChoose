@@ -126,6 +126,11 @@
     box-sizing: border-box;
     font-size: 18px;
     padding: 5px 7px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: #eee;
 }
 
 .signup-input {
@@ -133,6 +138,11 @@
     box-sizing: border-box;
     font-size: 18px;
     padding: 5px 7px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: #eee;
 }
 
 .policy-paragraph {
@@ -150,9 +160,13 @@
     padding: 8px 7px;
     border-radius: 3px;
     border-color: rgb(233, 166, 166);
-    background-color: rgb(233, 166, 166);
+    background-color: rgb(241, 182, 182);
     color: #fff;
     box-shadow: 1px 1px 5px lightgrey;
+}
+
+.session-submit:hover {
+    color: rgb(221, 220, 220);
 }
 
 ul {
@@ -170,4 +184,21 @@ ul {
     margin-left: 22px;
     color: rgb(216, 5, 5);
     list-style-type: disc;
+}
+
+.demo-login {
+    background-color: rgb(233, 166, 166);
+    box-sizing: border-box;
+    width: 150px;
+    font-size: 18px;
+    padding: 8px 7px;
+    border-radius: 3px;
+    border-color: rgb(233, 166, 166);
+    background-color: rgb(241, 182, 182);
+    color: #fff;
+    box-shadow: 1px 1px 5px lightgrey;
+}
+
+.demo-login:hover {
+    color: rgb(221, 220, 220);
 }

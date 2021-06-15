@@ -17,7 +17,6 @@ class LoginForm extends React.Component {
     this.demo = this.demo.bind(this);
   }
 
-  // Once the user has been authenticated, redirect to the Tweets page
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser === true) {
       this.props.history.push("/wheel");
@@ -102,7 +101,9 @@ class LoginForm extends React.Component {
             
             <div className="errors">{this.renderErrors()}</div>
           </div>
-          <button onClick={this.demo}>Demo Login</button>
+
+          <br />
+          <button className="demo-login" onClick={this.demo}>Demo Login</button>
         </form>
       </div>
     );
