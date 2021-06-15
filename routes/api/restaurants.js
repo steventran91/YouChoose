@@ -9,7 +9,7 @@ router.get("/test", (req, res) =>
 }));
 
 // route to get all of the restaurants 
-router.get('/restaurants', (req, res) => {
+router.get('/', (req, res) => {
     Restaurant
         .find()
         .then(restaurants => res.json(restaurants))
@@ -17,7 +17,7 @@ router.get('/restaurants', (req, res) => {
 })
 
 // route to get a specific restaurant
-router.get('/restaurants/:restaurant_id', (req, res) => {
+router.get('/:restaurant_id', (req, res) => {
     Restaurant
         .find({ id: req.params.id })
         .then((restaurant) => res.json(restaurant))
