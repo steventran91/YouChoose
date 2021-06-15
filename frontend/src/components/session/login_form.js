@@ -70,40 +70,46 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-        <h1 className="signup-form-header">Login</h1>
-        <form className="login-form-box" onSubmit={this.handleSubmit}>
-          <br />
-          <div className="login-form">
-            <input
-              className="login-input"
-              type="text"
-              value={this.state.email}
-              onChange={this.update("email")}
-              placeholder="Email"
-            />
+        <div className="background">
+          <h1 className="signup-form-header">Login</h1>
+          <form className="login-form-box" onSubmit={this.handleSubmit}>
             <br />
-            <br />
-            <input
-              className="login-input"
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              placeholder="Password"
-            />
-            <br />
-            <br />
-            <input className="session-submit" type="submit" value="Login" />
-            <br />
+            <div className="login-form">
+              <input
+                className="login-input"
+                type="text"
+                value={this.state.email}
+                onChange={this.update("email")}
+                placeholder="Email"
+              />
+              <br />
+              <br />
+              <input
+                className="login-input"
+                type="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                placeholder="Password"
+              />
+              <br />
+              <br />
+              <input className="session-submit" type="submit" value="Login" />
+              <br />
 
-            <p className="policy-paragraph">We may use your email and devices for updates and tips on YouChoose's
-              products and services and for activities notifications. You can unsubscribe
-              for free at any time in your notification settings. We may use information
-              you provide us in order to show you targeted ads as described in our Privacy Policy.</p>
-            
-            <div className="errors">{this.renderErrors()}</div>
-          </div>
-          <button onClick={this.demo}>Demo Login</button>
-        </form>
+              <p className="policy-paragraph">
+                We may use your email and devices for updates and tips on
+                YouChoose's products and services and for activities
+                notifications. You can unsubscribe for free at any time in your
+                notification settings. We may use information you provide us in
+                order to show you targeted ads as described in our Privacy
+                Policy.
+              </p>
+
+              <div className="errors">{this.renderErrors()}</div>
+            </div>
+            <button onClick={this.demo}>Demo Login</button>
+          </form>
+        </div>
       </div>
     );
   }
