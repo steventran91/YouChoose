@@ -1,0 +1,86 @@
+const axios = require("axios");
+
+let API_KEY =
+  "vtQcN3KpCafjc_DcNc-9Lxq0_oRovINWnMwchSxlSbd1SJFKYe6lld8uJTYPAIBJENylnjhvGx2ESyudRd2VwcwbPFuLmJKJamgXqCGLBji5cmKpw0Af9DzSk4rHYHYx";
+
+let yelpBayArea = axios.create({
+  baseURL: "https://api.yelp.com/v3/businesses/search",
+  headers: {
+      Authorization: `Bearer ${API_KEY}`,
+      "Content-type": "application/json",
+  },
+
+});
+
+yelpBayArea("/businesses/search", {
+    params: {
+        location: "san francisco",
+        term: `${cuisine}`,
+        limit: 10,
+    },
+}).then(({ data }) => {
+    let { businesses } = data 
+    businesses.forEach((business) => {
+        console.log(
+            "Name: ", business.name,
+            "Phone Number: ", business.display_phone,
+            "Price: ", business.price,
+            "Rating: ", business.rating,
+            "Category: ", business.categories,
+            "Address: ", business.location,
+            "Yelp URL: ", business.url  
+        )
+    })
+})
+
+let yelpNY = axios.create({
+  baseURL: "https://api.yelp.com/v3/businesses/search",
+  headers: {
+      Authorization: `Bearer ${API_KEY}`,
+      "Content-type": "application/json",
+  },
+
+});
+
+yelpNY("/businesses/search", {
+    params: {
+        location: "new york city",
+        term: `${cuisine}`,
+        limit: 10,
+    }
+}).then(({ data }) => {
+    let { businesses } = data 
+    businesses.forEach((business) => {
+        console.log(
+            "Name: ", business.name,
+            "Phone Number: ", business.display_phone,
+            "Price: ", business.price,
+            "Rating: ", business.rating,
+            "Category: ", business.categories,
+            "Address: ", business.location,
+            "Yelp URL: ", business.url  
+        )
+    })
+})
+
+
+
+
+
+// things to install: graphql, express-graphql, express, axios
+
+/* 
+in entry file app.js
+const express = require('express');
+const graphqlHTTP = require('express-graphql');
+const schema = require('./schema');
+
+const app = express();
+
+app.use('/graphql, graphqlHTTP({
+    schema: xxxxxx,
+    graphiql: true
+}));
+
+
+*/
