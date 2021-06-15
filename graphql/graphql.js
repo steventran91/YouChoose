@@ -1,7 +1,5 @@
 const axios = require("axios");
-
-let API_KEY =
-  "vtQcN3KpCafjc_DcNc-9Lxq0_oRovINWnMwchSxlSbd1SJFKYe6lld8uJTYPAIBJENylnjhvGx2ESyudRd2VwcwbPFuLmJKJamgXqCGLBji5cmKpw0Af9DzSk4rHYHYx";
+const API_KEY = ENV["YELP_API_KEY"];
 
 let yelpBayArea = axios.create({
   baseURL: "https://api.yelp.com/v3/businesses/search",
