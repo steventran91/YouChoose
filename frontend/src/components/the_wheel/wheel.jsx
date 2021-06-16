@@ -236,6 +236,7 @@ const Wheel = props => {
             <div className="wheel-container">
                 <canvas ref={canvasRef} {...props} width="500" height="500" />
                 <input onClick={spin} type="button" value="You Choose" id='spin' />
+                <strong className="close-modal" onClick={props.modalSwitch}>❌</strong>
             </div>
         </div>
     )

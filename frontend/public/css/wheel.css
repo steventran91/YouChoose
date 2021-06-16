@@ -9,7 +9,7 @@
 
 .modal-screen{
     position: fixed;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.2);
     top: 0;
     bottom: 0;
     left: 0;
@@ -25,7 +25,7 @@
     /* align-items: center; */
     /* justify-content: space-between; */
     z-index: 3;
-    background: white;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     width: min-content;
     /* height: 500px; */
@@ -68,4 +68,23 @@
     /* border-color: rgb(143, 103, 103); */
     background-color: rgb(230, 176, 176);
     box-shadow: 0 0 4px rgb(241, 182, 182);
+}
+
+.close-modal {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 1px 2px 1px 4px;
+    text-align: center;
+}
+
+.close-modal:hover {
+    cursor: pointer;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    top: 25px;
+    right: 25px;
+    
+    border-radius: 5px;
 }
