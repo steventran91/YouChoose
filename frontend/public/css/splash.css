@@ -49,8 +49,8 @@ section.slideshow section.current-slide {
 
 section.slideshow section.previous-slide,
 section.slideshow section.next-slide {
-    width: 150px;
-    height: 120px;
+    width: 180px;
+    height: 150px;
 }
 
 section.slideshow section.slide div.slide-thumbnail {
@@ -117,13 +117,20 @@ section.slideshow div.slideshow-controller span:active {
     justify-content: center;
     background-color: #c3f3ff;
     height: 400px;
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 300px;
+    margin-right: 300px;
     margin-top: 20px;
+}
+
+.text-background {
+    background-color: rgb(255, 247, 247);
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .splash-text {
     text-align: center;
+    width: 420px;
     font-size: 20px;
     color: rgb(42, 42, 42);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -144,6 +151,23 @@ section.slideshow div.slideshow-controller span:active {
     margin-top: 20px;
 }
 
+#splash-bottom {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
 
+.developers {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
-
+.steven,
+.juan,
+.mason,
+.brenda {
+    padding-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}

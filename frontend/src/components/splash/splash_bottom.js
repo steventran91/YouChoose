@@ -9,7 +9,13 @@ class SplashBottom extends React.Component {
         return (
             <div className="splash-bottom">
                 <div className="splash-bottom-text">
-                    <h1>Meet Our Developers</h1>
+                <h1 id="splash-bottom">Meet Our Developers</h1>
+                    <div className="developers">
+                        <div className="steven">Steven Tran</div>
+                        <div className="juan">Juan Barba</div>
+                        <div className="mason">Mason Saia</div>
+                        <div className="brenda">Brenda Jiang</div>
+                    </div>
                     </div>
             </div>
         )

@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-export default function Slideshow({ images = [], interval = 3000 }) {
+export default function FoodGallery({ images = [], interval = 3000 }) {
     const [thumbnails, setThumnails] = useState([]);
     const [previousSlideStyle, setPreviousSlideStyle] = useState({});
+    const [previousSlideStyle2, setPreviousSlideStyle2] = useState({});
     const [currentSlide, setCurrentSlide] = useState(0);
     const [nextSlideStyle, setNextSlideStyle] = useState({});
+    const [nextSlideStyle2, setNextSlideStyle2] = useState({});
     const [currentSlideStyle, setCurrentSlideStyle] = useState({});
 
     useEffect(() => {
@@ -13,13 +15,26 @@ export default function Slideshow({ images = [], interval = 3000 }) {
             backgroundImage: "url('" + images[currentSlide] + "')"
         });
 
-        if (currentSlide > 0) {
+        if (currentSlide === 1) {
             setPreviousSlideStyle({
                 backgroundImage: "url('" + images[currentSlide - 1] + "')"
+            });
+            setPreviousSlideStyle2({
+                backgroundImage: "url('" + images[images.length - 1] + "')"
+            });
+        } else if (currentSlide > 0) {
+            setPreviousSlideStyle({
+                backgroundImage: "url('" + images[currentSlide - 1] + "')"
+            });
+            setPreviousSlideStyle2({
+                backgroundImage: "url('" + images[currentSlide - 2] + "')"
             });
         } else {
             setPreviousSlideStyle({
                 backgroundImage: "url('" + images[images.length - 1] + "')"
+            });
+            setPreviousSlideStyle2({
+                backgroundImage: "url('" + images[images.length - 2] + "')"
             });
         }
 
@@ -27,11 +42,24 @@ export default function Slideshow({ images = [], interval = 3000 }) {
             setNextSlideStyle({
                 backgroundImage: "url('" + images[0] + "')"
             });
+            setNextSlideStyle2({
+                backgroundImage: "url('" + images[1] + "')"
+            });
+        } else if (currentSlide === images.length - 2) {
+            setNextSlideStyle({
+                backgroundImage: "url('" + images[currentSlide + 1] + "')"
+            });
+            setNextSlideStyle2({
+                backgroundImage: "url('" + images[0] + "')"
+            });
         } else {
             setNextSlideStyle({
                 backgroundImage: "url('" + images[currentSlide + 1] + "')"
             });
-        }
+            setNextSlideStyle2({
+                backgroundImage: "url('" + images[currentSlide + 2] + "')"
+            });
+        } 
 
         const loop = setInterval(() => {
             if (currentSlide === images.length - 1) {
@@ -59,51 +87,12 @@ export default function Slideshow({ images = [], interval = 3000 }) {
         }
     }
 
-    //     render() {
-    //         var slideshows = document.querySelectorAll('[data-component="slideshow"]');
-    //         slideshows.forEach(initSlideShow);
-
-    //         function initSlideShow(slideshow) {
-    //             var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
-    //             var index = 0, time = 4000;
-    //             slides[index].classList.add('active');
-
-    //             setInterval(() => {
-    //                 slides[index].classList.remove('active');
-
-    //                 index++;
-    //                 if (index === slides.length) index = 0;
-
-    //                 slides[index].classList.add('active');
-
-    //             }, time);
-    //         }
-
-    //         // this.forceUpdate();
-
-    //         return (
-    //             <div className="slide-show" >
-    //                 <div id="slideshow-example" data-component="slideshow">
-    //                     <div role="list">
-    //                         <div class="slide">
-    //                             <img src="https://static.vecteezy.com/system/resources/previews/000/463/565/original/healthy-food-clipart-vector.jpg" alt="First Image"></img>
-    //                         </div>
-    //                         <div class="slide">
-    //                             <img src="https://i.ytimg.com/vi/krgkUXrOpvg/maxresdefault.jpg" alt="Second Image"></img>
-    //                         </div>
-    //                         <div class="slide">
-    //                             <img src="https://image.freepik.com/free-vector/panda-eat-pizza-slice-cartoon-illustration_138676-1500.jpg" alt="Third Image"></img>
-    //                         </div>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         )
-    //     }
-    // }
-
-     return (
-        <section className="slideshow">
+    return (
+        <section className="food-gallery">
             <div className="slide-holder">
+                <section className="slide previous-slide">
+                    <div style={previousSlideStyle2} className="slide-thumbnail"></div>
+                </section>
                 <section className="slide previous-slide">
                     <div style={previousSlideStyle} className="slide-thumbnail"></div>
                 </section>
@@ -112,6 +101,9 @@ export default function Slideshow({ images = [], interval = 3000 }) {
                 </section>
                 <section className="slide next-slide">
                     <div style={nextSlideStyle} className="slide-thumbnail"></div>
+                </section>
+                <section className="slide next-slide">
+                    <div style={nextSlideStyle2} className="slide-thumbnail"></div>
                 </section>
             </div>
 
