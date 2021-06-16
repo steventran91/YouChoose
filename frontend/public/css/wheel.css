@@ -88,3 +88,7 @@
     
     border-radius: 5px;
 }
+
+.demo-login {
+    cursor: pointer;
+}
