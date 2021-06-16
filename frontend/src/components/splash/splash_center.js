@@ -8,7 +8,12 @@ class SplashCenter extends React.Component {
     render() {
         return (
             <div className="splash-center">
-                <div className="splash-text">About YouChoose</div>
+                <div className="splash-text">
+                    <h1 className="about-me">About YouChoose</h1>
+                    <br />
+                    <h2 className="about-me-question">Have you ever wondered about what you should eat that day?</h2>
+                    
+                    </div>
             </div>
         )
     }
