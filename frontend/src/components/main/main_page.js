@@ -2,6 +2,7 @@ import React from "react";
 import morning from './images/morning.jpeg' 
 import afternoon from './images/afternoon.jpeg' 
 import night from "./images/night.jpeg"; 
+import Wheel from "../the_wheel/wheel"
 
 class MainPage extends React.Component {
   constructor() {
@@ -59,6 +60,7 @@ class MainPage extends React.Component {
           <button onClick={this.handleMorningClick}>Breakfast</button>
           <button onClick={this.handleNoonClick}>Lunch</button>
           <button onClick={this.handleNightClick}>Dinner</button>
+          <Wheel />
           <footer>Copyright &copy; 2021 SHEEEESH</footer>
         </div>
       );
