@@ -1,5 +1,5 @@
 const axios = require("axios");
-const API_KEY = ENV["YELP_API_KEY"];
+const API_KEY = require("../config/yelp_api");
 
 let yelpBayArea = axios.create({
   baseURL: "https://api.yelp.com/v3/businesses/search",
@@ -13,7 +13,7 @@ let yelpBayArea = axios.create({
 yelpBayArea("/businesses/search", {
     params: {
         location: "san francisco",
-        term: `${cuisine}`,
+        term: "food",
         limit: 10,
     },
 }).then(({ data }) => {
@@ -43,7 +43,7 @@ let yelpNY = axios.create({
 yelpNY("/businesses/search", {
     params: {
         location: "new york city",
-        term: `${cuisine}`,
+        term: "food",
         limit: 10,
     }
 }).then(({ data }) => {

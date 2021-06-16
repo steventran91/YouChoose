@@ -12,6 +12,10 @@
     border-color: rgb(143, 202, 251);
 }
 
+.youchoose {
+    font-family: FreeMono, monospace;
+}
+
 .navbar-left {
     color: white;
     text-align: center;
@@ -37,8 +41,8 @@
     align-items: flex-end;
     font-weight: 100;
     text-decoration: none;
-    padding: 3px 11px 2px 10px;
-    border-radius: 3px;
+    padding: 4px 11px 2px 10px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 25px;
     line-height: 20px;
@@ -48,6 +52,9 @@
     vertical-align: baseline;
     margin-right: 15px;
     color: rgb(255, 255, 255);
+    border-color: rgb(233, 166, 166);
+    background-color: rgb(241, 182, 182);
+    font-family: Didot, serif;
 }
 
 .login-button:hover {
@@ -56,9 +63,10 @@
 
 .signup-button {
     align-items: flex-end;
-    padding: 3px 11px 2px 10px;
+    padding: 5px 11px 2px 10px;
     cursor: pointer;
     font-size: 25px;
+    border-radius: 10px;
     line-height: 20px;
     text-decoration: none;
     font-weight: 100;
@@ -66,6 +74,11 @@
     vertical-align: baseline;
     width: 136px;
     color: white;
+    border-color: rgb(233, 166, 166);
+    background-color: rgb(241, 182, 182);
+    width: 90px;
+    margin-right: 10px;
+    font-family: Didot, serif;
 }
 
 .signup-button:hover {
@@ -75,27 +88,28 @@
 .logout-button {
     align-items: flex-end;
     position: flex;
-    width: 136px;
-    font-weight: 100;
-    width: 74px;
+    width: 110px;
+    margin-right: 50px;
     padding: 3px 11px 2px 8px;
     border: 1px solid #e5e5e5;
-    border-radius: 3px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 25px;
     line-height: 20px;
-    white-space: nowrap;
-    font-weight: 100;
     text-align: center;
     vertical-align: baseline;
-    background-color: rgb(59, 58, 58);
     color: white;
+    border-color: rgb(233, 166, 166);
+    background-color: rgb(241, 182, 182);
+    font-family: Didot, serif;
 }
 
 .home-button {
     align-items: flex-end;
-    padding: 3px 11px 2px 0px;
+    margin-left: 10px;
+    padding: 4px 2px 5px 1px;
     cursor: pointer;
+    border-radius: 10px;
     font-size: 25px;
     line-height: 20px;
     text-decoration: none;
@@ -105,6 +119,10 @@
     width: 136px;
     color: white;
     margin-right: 100px;
+    border-color: rgb(233, 166, 166);
+    background-color: rgb(241, 182, 182);
+    width: 90px;
+    font-family: Didot, serif;
 }
 
 .home:hover {
@@ -115,13 +133,24 @@
     padding-top: 50px;
     text-align: center;
     background-color: #c3f3ff;
-    width: 99.19vw;
+    max-width: auto;
+    margin-left: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 420px;
 }
 
 .login-form-container {
     padding-top: 50px;
     text-align: center;
     background-color: #c3f3ff;
+    height: 420px;
+    max-width: auto;
+    margin-left: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .login-input {
@@ -129,6 +158,11 @@
     box-sizing: border-box;
     font-size: 18px;
     padding: 5px 7px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: rgb(255, 255, 255);
 }
 
 .signup-input {
@@ -136,6 +170,11 @@
     box-sizing: border-box;
     font-size: 18px;
     padding: 5px 7px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color: rgb(255, 255, 255);
 }
 
 .policy-paragraph {
@@ -143,6 +182,8 @@
     width: 500px;
     margin-left: auto;
     margin-right: auto;
+    background-color: rgb(255, 255, 255);
+    opacity: 80%;
 }
 
 .session-submit {
@@ -153,9 +194,14 @@
     padding: 8px 7px;
     border-radius: 3px;
     border-color: rgb(233, 166, 166);
-    background-color: rgb(233, 166, 166);
+    background-color: rgb(241, 182, 182);
     color: #fff;
     box-shadow: 1px 1px 5px lightgrey;
+    font-family: Didot, serif;
+}
+
+.session-submit:hover {
+    color: rgb(221, 220, 220);
 }
 
 ul {
@@ -175,6 +221,22 @@ ul {
     list-style-type: disc;
 }
 
+.demo-login {
+    background-color: rgb(233, 166, 166);
+    box-sizing: border-box;
+    width: 150px;
+    font-size: 18px;
+    padding: 8px 7px;
+    border-radius: 3px;
+    border-color: rgb(233, 166, 166);
+    background-color: rgb(241, 182, 182);
+    color: #fff;
+    box-shadow: 1px 1px 5px lightgrey;
+}
+
+.demo-login:hover {
+    color: rgb(221, 220, 220);
+}
 .background {
     background-image: url('../Appetizers.png');
     background-color: #c3f3ff;
