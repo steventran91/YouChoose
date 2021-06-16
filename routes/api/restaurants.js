@@ -17,7 +17,7 @@ router.get("/search", (req, res) => {
     .then((response) => {
       const firstResult = response.jsonBody.businesses.slice(0, 10);
       const prettyJson = JSON.stringify(firstResult, null, 4);
-      console.log(prettyJson); //return and assign  to variable or set state
+      console.log(prettyJson);
       res.json(firstResult);
     })
     .catch((e) => {
