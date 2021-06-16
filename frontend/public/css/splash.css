@@ -1,0 +1,35 @@
+.splash-main {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-style: solid;
+    border-color: rgb(209, 209, 209);
+    margin-top: 20px;
+}
+
+.splash-center {
+    display: flex;
+    justify-content: center;
+    background-color: #c3f3ff;
+    height: 500px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+.splash-bottom {
+    display: flex;
+    justify-content: center;
+    background-color: #c3f3ff;
+    height: 300px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}
+
+
+
+
