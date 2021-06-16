@@ -11,7 +11,7 @@ const Wheel = props => {
         ctx.arc(50, 100, 20 * Math.sin(frameCount * 0.05) ** 2, 0, 2 * Math.PI)
         ctx.fill()
     }
-
+// should be filled with different cuisines 
     var options = ["$100", "$10", "$25", "$250", "$30", "$1000", "$1", "$200", "$45", "$500", "$5", "$20", "Lose", "$1000000", "Lose", "$350", "$5", "$99"];
 
     var startAngle = 0;

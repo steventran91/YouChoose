@@ -5,6 +5,8 @@ const Restaurant = require("../../models/Restaurant");
 const API_KEY = require("../../config/yelp_api").YELP_API_KEY;
 const yelp = require("yelp-fusion");
 const client = yelp.client(API_KEY);
+// const validateBreakfast = require("../../validation/breakfast");
+// const validateMeal = require("../../validation/meal");
 
 router.get("/search", (req, res) => {
   const searchRequest = {
