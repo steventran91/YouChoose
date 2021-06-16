@@ -32,7 +32,7 @@ yelpBayArea("/businesses/search", {
 })
 
 let yelpNY = axios.create({
-  baseURL: "https://api.yelp.com/v3/businesses/search",
+  baseURL: "https://api.yelp.com/v3",
   headers: {
       Authorization: `Bearer ${API_KEY}`,
       "Content-type": "application/json",
