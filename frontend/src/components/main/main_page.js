@@ -21,7 +21,8 @@ class MainPage extends React.Component {
 
     this.state = {
       index: index,
-      imgList: [morning, afternoon, night]
+      imgList: [morning, afternoon, night],
+      
     }
 
     this.handleMorningClick = this.handleMorningClick.bind(this);
