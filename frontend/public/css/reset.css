@@ -5,7 +5,7 @@ ol, ul, li, label, form, textarea, input,
 article, aside, canvas, figure, time,
 footer, header, figcaption, nav, section {
     margin: 0;
-/*     border: 0; */
+    /* border: 0; */
     padding: 0;
     outline: 0;
     background: transparent;
