@@ -4,3 +4,7 @@
     margin-right: auto;
     max-height: 750px;
 }
+
+#root {
+    background-color: rgb(241, 241, 241);
+}
