@@ -4,13 +4,13 @@ const Wheel = props => {
 
     const canvasRef = useRef(null)
 
-    const draw = (ctx, frameCount) => {
-        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-        ctx.fillStyle = '#000000'
-        ctx.beginPath()
-        ctx.arc(50, 100, 20 * Math.sin(frameCount * 0.05) ** 2, 0, 2 * Math.PI)
-        ctx.fill()
-    }
+    // const draw = (ctx, frameCount) => {
+    //     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
+    //     ctx.fillStyle = '#000000'
+    //     ctx.beginPath()
+    //     ctx.arc(50, 100, 20 * Math.sin(frameCount * 0.05) ** 2, 0, 2 * Math.PI)
+    //     ctx.fill()
+    // }
 
     var options = ["$100", "$10", "$25", "$250", "$30", "$1000", "$1", "$200", "$45", "$500", "$5", "$20", "Lose", "$1000000", "Lose", "$350", "$5", "$99"];
     
@@ -60,7 +60,7 @@ const Wheel = props => {
             ctx.strokeStyle = "black";
             ctx.lineWidth = 2;
 
-            ctx.font = 'bold 12px Helvetica, Arial';
+            ctx.font = 'bold 12px Didot, serif';
 
             for (var i = 0; i < options.length; i++) {
                 var angle = startAngle + i * arc;
@@ -133,7 +133,7 @@ const Wheel = props => {
         var arcd = arc * 180 / Math.PI;
         var index = Math.floor((360 - degrees % 360) / arcd);
         ctx.save();
-        ctx.font = 'bold 30px Helvetica, Arial';
+        ctx.font = 'bold 30px Didot, serif';
         var text = options[index];
         console.log(text);
         ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
@@ -158,7 +158,7 @@ const Wheel = props => {
             ctx.strokeStyle = "black";
             ctx.lineWidth = 2;
 
-            ctx.font = 'bold 12px Helvetica, Arial';
+            ctx.font = 'bold 12px Didot, serif';
 
             for (var i = 0; i < options.length; i++) {
                 var angle = startAngle + i * arc;
@@ -202,7 +202,8 @@ const Wheel = props => {
             var arcd = arc * 180 / Math.PI;
             var index = Math.floor((360 - degrees % 360) / arcd);
             ctx.save();
-            ctx.font = 'bold 30px Helvetica, Arial';
+            // font - family: ;
+            ctx.font = 'bold 30px Didot, serif';
             var text = options[index];
             ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
             ctx.restore();
@@ -230,11 +231,12 @@ const Wheel = props => {
     }, [drawRouletteWheel])
 
     return (
-        <div className="modal">
-            <div className="modal-screen"></div>
+        <div className={`modal${props.active ? " active" : ""}`}>
+            <div className="modal-screen" onClick={props.modalSwitch}></div>
             <div className="wheel-container">
-                <canvas ref={canvasRef} {...props} width="1000" height="1000" />
-                <input onClick={spin} type="button" value="spin" id='spin' />
+                <canvas ref={canvasRef} {...props} width="500" height="500" />
+                <input onClick={spin} type="button" value="You Choose" id='spin' />
+                <strong className="close-modal" onClick={props.modalSwitch}>❌</strong>
             </div>
         </div>
     )
