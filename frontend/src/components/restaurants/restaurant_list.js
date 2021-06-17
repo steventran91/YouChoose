@@ -49,14 +49,10 @@ class RestaurantList extends React.Component {
             )
         } else {
             return (
-              <div className="restaurant-list">
-                {Object.values(this.props.restaurants).map((restaurant) => {
-                  return <RestaurantContainer restaurant={restaurant} />;
-                })}
-              </div>
-            );
-        } else {
-            return null;
+                <div>
+                    <p>hi</p>
+                </div>
+            )
         }
         
     }
