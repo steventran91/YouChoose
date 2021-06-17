@@ -8,6 +8,7 @@ class RestaurantList extends React.Component {
             index: 0
         }
         this.handleIndex = this.handleIndex.bind(this);
+        this.handleRandom = this.handleRandom.bind(this);
     }
 
     componentDidMount(){
@@ -26,11 +27,20 @@ class RestaurantList extends React.Component {
             this.setState({index})
         }
     }
+    handleRandom(e){
+        e.preventDefault();
+        this.setState({ index: Math.floor(Math.random() * Object.values(this.props.restaurants).length)})
+    }
 
     render(){
         if (this.props.restaurants) {
             return(
                 <div className="restaurant-page">
+                    <button 
+                    onClick={this.handleRandom}
+                    className="restaurant-you-choose">
+                        You Choose
+                    </button>
                     <ul className="restaurant-list">
                         {Object.values(this.props.restaurants).map((restaurant, index) => {
                             // return <RestaurantContainer restaurant={restaurant} />
