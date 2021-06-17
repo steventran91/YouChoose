@@ -95,7 +95,7 @@ class LoginForm extends React.Component {
               <br />
               <input className="session-submit" type="submit" value="Login" />
               <br />
-
+              <br />
               <p className="policy-paragraph">
                 We may use your email and devices for updates and tips on
                 YouChoose's products and services and for activities
@@ -106,8 +106,9 @@ class LoginForm extends React.Component {
               </p>
 
               <div className="errors">{this.renderErrors()}</div>
+              <br />
+              <button className="demo-login" onClick={this.demo}>Demo Login</button>
             </div>
-            <button className="demo-login" onClick={this.demo}>Demo Login</button>
             <br />
           </form>
         </div>
