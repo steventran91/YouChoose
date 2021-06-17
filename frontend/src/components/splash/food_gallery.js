@@ -4,9 +4,11 @@ export default function FoodGallery({ images = [], interval = 3000 }) {
     const [thumbnails, setThumnails] = useState([]);
     const [previousSlideStyle, setPreviousSlideStyle] = useState({});
     const [previousSlideStyle2, setPreviousSlideStyle2] = useState({});
+    const [previousSlideStyle3, setPreviousSlideStyle3] = useState({});
     const [currentSlide, setCurrentSlide] = useState(0);
     const [nextSlideStyle, setNextSlideStyle] = useState({});
     const [nextSlideStyle2, setNextSlideStyle2] = useState({});
+    const [nextSlideStyle3, setNextSlideStyle3] = useState({});
     const [currentSlideStyle, setCurrentSlideStyle] = useState({});
 
     useEffect(() => {
@@ -15,12 +17,25 @@ export default function FoodGallery({ images = [], interval = 3000 }) {
             backgroundImage: "url('" + images[currentSlide] + "')"
         });
 
-        if (currentSlide === 1) {
+        if (currentSlide === 2) {
+            setPreviousSlideStyle({
+                backgroundImage: "url('" + images[currentSlide - 1] + "')"
+            });
+            setPreviousSlideStyle2({
+                backgroundImage: "url('" + images[currentSlide - 2] + "')"
+            });
+            setPreviousSlideStyle3({
+                backgroundImage: "url('" + images[images.length - 1] + "')"
+            });
+        } else if (currentSlide === 1) {
             setPreviousSlideStyle({
                 backgroundImage: "url('" + images[currentSlide - 1] + "')"
             });
             setPreviousSlideStyle2({
                 backgroundImage: "url('" + images[images.length - 1] + "')"
+            });
+            setPreviousSlideStyle3({
+                backgroundImage: "url('" + images[images.length - 2] + "')"
             });
         } else if (currentSlide > 0) {
             setPreviousSlideStyle({
@@ -29,12 +44,18 @@ export default function FoodGallery({ images = [], interval = 3000 }) {
             setPreviousSlideStyle2({
                 backgroundImage: "url('" + images[currentSlide - 2] + "')"
             });
+            setPreviousSlideStyle3({
+                backgroundImage: "url('" + images[currentSlide - 3] + "')"
+            });
         } else {
             setPreviousSlideStyle({
                 backgroundImage: "url('" + images[images.length - 1] + "')"
             });
             setPreviousSlideStyle2({
                 backgroundImage: "url('" + images[images.length - 2] + "')"
+            });
+            setPreviousSlideStyle3({
+                backgroundImage: "url('" + images[images.length - 3] + "')"
             });
         }
 
@@ -45,11 +66,27 @@ export default function FoodGallery({ images = [], interval = 3000 }) {
             setNextSlideStyle2({
                 backgroundImage: "url('" + images[1] + "')"
             });
+            setNextSlideStyle3({
+                backgroundImage: "url('" + images[2] + "')"
+            });
         } else if (currentSlide === images.length - 2) {
+            setNextSlideStyle({
+                backgroundImage: "url('" + images[11] + "')"
+            });
+            setNextSlideStyle2({
+                backgroundImage: "url('" + images[0] + "')"
+            });
+            setNextSlideStyle3({
+                backgroundImage: "url('" + images[1] + "')"
+            });
+        } else if (currentSlide === images.length - 3) {
             setNextSlideStyle({
                 backgroundImage: "url('" + images[currentSlide + 1] + "')"
             });
             setNextSlideStyle2({
+                backgroundImage: "url('" + images[currentSlide + 2] + "')"
+            });
+            setNextSlideStyle3({
                 backgroundImage: "url('" + images[0] + "')"
             });
         } else {
@@ -58,6 +95,9 @@ export default function FoodGallery({ images = [], interval = 3000 }) {
             });
             setNextSlideStyle2({
                 backgroundImage: "url('" + images[currentSlide + 2] + "')"
+            });
+            setNextSlideStyle3({
+                backgroundImage: "url('" + images[currentSlide + 3] + "')"
             });
         } 
 
@@ -90,6 +130,9 @@ export default function FoodGallery({ images = [], interval = 3000 }) {
     return (
         <section className="food-gallery">
             <div className="slide-holder">
+            <section className="slide previous-slide">
+                    <div style={previousSlideStyle3} className="slide-thumbnail"></div>
+                </section>
                 <section className="slide previous-slide">
                     <div style={previousSlideStyle2} className="slide-thumbnail"></div>
                 </section>
@@ -104,6 +147,9 @@ export default function FoodGallery({ images = [], interval = 3000 }) {
                 </section>
                 <section className="slide next-slide">
                     <div style={nextSlideStyle2} className="slide-thumbnail"></div>
+                </section>
+                <section className="slide next-slide">
+                    <div style={nextSlideStyle3} className="slide-thumbnail"></div>
                 </section>
             </div>
 
