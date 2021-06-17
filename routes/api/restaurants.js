@@ -36,7 +36,7 @@ router.post("/search", (req, res) => {
     .then((response) => {
       const firstResult = response.jsonBody.businesses.slice(0, 10);
       const prettyJson = JSON.stringify(firstResult, null, 4);
-      console.log(prettyJson);
+      console.log(req.body.cuisine);
       res.json(firstResult);
     })
     .catch((e) => {

@@ -3,10 +3,12 @@ import morning from './images/morning.jpeg'
 import afternoon from './images/afternoon.jpeg' 
 import night from "./images/night.jpeg"; 
 import Wheel from "../the_wheel/wheel"
+import WheelContainer from '../the_wheel/wheel_container';
+
 
 class MainPage extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     let today = new Date();
     let hour = today.getHours();
     let index = 0;
@@ -22,13 +24,20 @@ class MainPage extends React.Component {
     this.state = {
       index: index,
       imgList: [morning, afternoon, night],
-      modalActive: false
+      modalActive: false,
+      location: "sanfrancisco" 
     }
 
     this.handleMorningClick = this.handleMorningClick.bind(this);
     this.handleNoonClick = this.handleNoonClick.bind(this);
     this.handleNightClick = this.handleNightClick.bind(this);
     this.modalSwitch = this.modalSwitch.bind(this);
+    this.selectLocation = this.selectLocation.bind(this);
+  }
+
+  selectLocation(e) {
+    e.preventDefault()
+    this.setState({location: e.target.value })
   }
 
   handleMorningClick(){
@@ -62,22 +71,38 @@ class MainPage extends React.Component {
   render() {
       return (
         <div className="main-container">
-          <img src={this.state.imgList[this.state.index]} className="backgroundImg"/>
-          <button onClick={
-            () => {
+          <img
+            src={this.state.imgList[this.state.index]}
+            className="backgroundImg"
+          />
+          <button
+            onClick={() => {
               this.handleMorningClick();
               this.modalSwitch();
-            }}>Breakfast</button>
-          <button onClick={
-            () => {
+            }}
+          >
+            Breakfast
+          </button>
+          <button
+            onClick={() => {
               this.handleNoonClick();
               this.modalSwitch();
-            }}>Lunch</button>
-          <button onClick={() => {
-            this.handleNightClick();
-            this.modalSwitch();
-          }}>Dinner</button>
-          <Wheel active={this.state.modalActive} modalSwitch={this.modalSwitch} />
+            }}
+          >
+            Lunch
+          </button>
+          <button
+            onClick={() => {
+              this.handleNightClick();
+              this.modalSwitch();
+            }}
+          >
+            Dinner
+          </button>
+          <WheelContainer
+            active={this.state.modalActive}
+            modalSwitch={this.modalSwitch}
+          />
           <footer>Copyright &copy; 2021 SHEEEESH</footer>
         </div>
       );
