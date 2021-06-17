@@ -11,11 +11,8 @@ class RestaurantList extends React.Component {
     }
 
     componentDidMount(){
-        // debugger
         let cuisine = this.props.cuisine
         let region = this.props.region
-        console.log(cuisine)
-        console.log(region)
         this.props.fetchRestaurantsByCuisine({cuisine: cuisine, location: region});
     }
 
@@ -56,9 +53,10 @@ class RestaurantList extends React.Component {
                     <p>hi</p>
                 </div>
             )
-
         }
+        
     }
 }
+
 
 export default RestaurantList;
