@@ -31,7 +31,6 @@ class RestaurantList extends React.Component {
     }
 
     render(){
-
         if (this.props.restaurants) {
             return(
                 <div className="restaurant-page">

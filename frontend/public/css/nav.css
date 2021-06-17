@@ -2,7 +2,7 @@
     display: flex;
     position: static;
     width: 100%;
-    height: 60px;
+    height: 70px;
     margin: 10 auto;
     align-items: center;
     justify-content: space-between;
@@ -36,6 +36,10 @@
 .login-buttons {
     display: flex;
     flex-direction: row;
+}
+
+.loggedin-right {
+    display: flex;
 }
 
 .login-button {
@@ -103,14 +107,18 @@
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
     font-family: Didot, serif;
+    height: 30px;
+    margin-top: 12px;
 }
 
-.location-btn {
-    align-items: flex-end;
-    position: flex;
+.logout-button:hover {
+    color: grey;
+}
+
+.location-buttons li {
     width: 140px;
+    height: 25px;
     margin-right: 20px;
-    padding: 3px 11px 2px 8px;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     cursor: pointer;
@@ -122,6 +130,16 @@
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
     font-family: Didot, serif;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+.location-buttons li:hover {
+    color: grey;
+}
+
+.location-buttons li.active {
+    background-color: rgb(184, 136, 136);
 }
 
 .home-button {
@@ -145,7 +163,7 @@
     font-family: Didot, serif;
 }
 
-.home:hover {
+.home-button:hover {
     color: grey;
 }
 
