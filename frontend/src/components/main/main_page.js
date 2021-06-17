@@ -1,7 +1,7 @@
 import React from "react";
-import morning from './images/morning.jpeg' 
-import afternoon from './images/afternoon.jpeg' 
-import night from "./images/night.jpeg"; 
+import morning from './images/morning.jpeg'
+import afternoon from './images/afternoon.jpeg'
+import night from "./images/night.jpeg";
 import Wheel from "../the_wheel/wheel"
 import WheelContainer from '../the_wheel/wheel_container';
 
@@ -13,11 +13,11 @@ class MainPage extends React.Component {
     let hour = today.getHours();
     let index = 0;
 
-    if(hour < 11){
+    if (hour < 11) {
       index = 0
-    }else if(hour > 11 && hour < 16){
+    } else if (hour > 11 && hour < 16) {
       index = 1
-    }else{
+    } else {
       index = 2
     }
 
@@ -25,7 +25,7 @@ class MainPage extends React.Component {
       index: index,
       imgList: [morning, afternoon, night],
       modalActive: false,
-      location: "sanfrancisco" 
+      location: "sanfrancisco"
     }
 
     this.handleMorningClick = this.handleMorningClick.bind(this);
@@ -37,45 +37,47 @@ class MainPage extends React.Component {
 
   selectLocation(e) {
     e.preventDefault()
-    this.setState({location: e.target.value })
+    this.setState({ location: e.target.value })
   }
 
-  handleMorningClick(){
-   if(this.state.index !== 0){
-    this.setState({
-      index: 0
-    })
-   }
+  handleMorningClick() {
+    if (this.state.index !== 0) {
+      this.setState({
+        index: 0
+      })
+    }
   }
 
-  handleNoonClick(){
-   if(this.state.index !== 1){
-    this.setState({
-      index: 1
-    })
-   }
+  handleNoonClick() {
+    if (this.state.index !== 1) {
+      this.setState({
+        index: 1
+      })
+    }
   }
 
-  handleNightClick(){
-   if(this.state.index !== 2){
-    this.setState({
-      index: 2
-    })
-   }
+  handleNightClick() {
+    if (this.state.index !== 2) {
+      this.setState({
+        index: 2
+      })
+    }
   }
 
-  modalSwitch(){
-    this.setState({modalActive: !this.state.modalActive});
+  modalSwitch() {
+    this.setState({ modalActive: !this.state.modalActive });
   }
 
   render() {
-      return (
-        <div className="main-container">
-          <img
-            src={this.state.imgList[this.state.index]}
-            className="backgroundImg"
-          />
+    return (
+      <div className="main-container">
+        <img
+          src={this.state.imgList[this.state.index]}
+          className="backgroundImg"
+        />
+        <div className="all-buttons" >
           <button
+            className="breakfast-button"
             onClick={() => {
               this.handleMorningClick();
               this.modalSwitch();
@@ -84,6 +86,7 @@ class MainPage extends React.Component {
             Breakfast
           </button>
           <button
+            className="lunch-button"
             onClick={() => {
               this.handleNoonClick();
               this.modalSwitch();
@@ -92,6 +95,7 @@ class MainPage extends React.Component {
             Lunch
           </button>
           <button
+            className="dinner-button"
             onClick={() => {
               this.handleNightClick();
               this.modalSwitch();
@@ -99,13 +103,14 @@ class MainPage extends React.Component {
           >
             Dinner
           </button>
-          <WheelContainer
-            active={this.state.modalActive}
-            modalSwitch={this.modalSwitch}
-          />
-          <footer>Copyright &copy; 2021 SHEEEESH</footer>
         </div>
-      );
+        <WheelContainer
+          active={this.state.modalActive}
+          modalSwitch={this.modalSwitch}
+        />
+        <footer>Copyright &copy; 2021 SHEEEESH</footer>
+      </div>
+    );
   }
 }
 
