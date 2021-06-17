@@ -28,11 +28,11 @@
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     width: min-content;
-    /* height: 500px; */
+    height: 550px;
     left: 0%;
     right: 0%;
     bottom: 0%;
-    top: 5;
+    top: 0%;
     margin: auto;
     /* justify-self: center; */
     padding: 30px;
