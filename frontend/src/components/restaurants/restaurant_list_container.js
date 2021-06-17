@@ -3,9 +3,7 @@ import { fetchRestaurantsByCuisine } from "../../actions/restaurant_actions";
 import RestaurantList from "./restaurant_list";
 
 const mSTP = (state) => {
-  console.log(state)
   return {
-
     cuisine: state.session.cuisine,
     region: state.session.location,
     restaurants: state.restaurants.data
