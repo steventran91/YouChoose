@@ -1,12 +1,15 @@
 import {
-    RECEIVE_CURRENT_USER,
-    RECEIVE_USER_LOGOUT,
-    RECEIVE_USER_SIGN_IN
-} from '../actions/session_actions';
+  RECEIVE_CURRENT_USER,
+  RECEIVE_USER_LOGOUT,
+  RECEIVE_USER_SIGN_IN,
+  RECEIVE_LOCATION,
+  RECEIVE_CUISINE
+} from "../actions/session_actions";
 
 const initialState = {
     isAuthenticated: false,
-    user: {}
+    user: {},
+    location: "sanfrancisco"
 };
 
 export default function (state = initialState, action) {
@@ -19,8 +22,19 @@ export default function (state = initialState, action) {
             };
         case RECEIVE_USER_LOGOUT:
             return {
-                isAuthenticated: false,
-                user: undefined
+              isAuthenticated: false,
+              user: undefined,
+              location: "sanfrancisco"
+            };
+        case RECEIVE_LOCATION:
+            return {
+                ...state,
+                location: action.location
+            };
+        case RECEIVE_CUISINE:
+            return {
+                ...state,
+                cuisine: action.cuisine
             };
         default:
             return state;

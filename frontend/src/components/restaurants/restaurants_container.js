@@ -1,17 +1,20 @@
 import { connect } from 'react-redux';
-import { fetchRestaurants } from '../../actions/restaurant_actions';   
-import Restaurants from './restaurants'
+import { fetchRestaurantsByCuisine } from '../../actions/restaurant_actions';   
+import Restaurants from './restaurants';
+import { receiveLocation, receiveCuisine } from '../../actions/session_actions';
 
 const mSTP = (state) => {
     return {
-        restaurants: Object.values(state.restaurants.all)
+        // restaurants: Object.values(state.restaurants.all)
+        region: state.session.location,
+        cuisine: state.session.cuisine
     };
 };
 
 const mDTP = (dispatch) => {
     return {
-        fetchRestaurants: () => dispatch(fetchRestaurants()),
+      fetchRestaurantsByCuisine: (restaurantData) => dispatch(fetchRestaurantsByCuisine(restaurantData)),
     };
 };
 
-export default connect(mDTP, mSTP)(Restaurants)
+export default connect(mSTP, mDTP)(Restaurants)
