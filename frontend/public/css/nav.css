@@ -108,14 +108,14 @@
     background-color: rgb(241, 182, 182);
     font-family: Didot, serif;
     height: 30px;
-    margin-top: 12px;
+    margin-top: 7px;
 }
 
 .logout-button:hover {
     color: grey;
 }
 
-.location-buttons li {
+.location-buttons {
     width: 140px;
     height: 25px;
     margin-right: 20px;
@@ -130,17 +130,14 @@
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
     font-family: Didot, serif;
-    margin-top: 3px;
+    margin-top: 10px;
     margin-bottom: 2px;
 }
 
-.location-buttons li:hover {
+.location-buttons:hover {
     color: grey;
 }
 
-.location-buttons li.active {
-    background-color: rgb(184, 136, 136);
-}
 
 .home-button {
     align-items: flex-end;

@@ -26,10 +26,8 @@ class NavBar extends React.Component {
         if (this.props.loggedIn) {
             display = (
                 <div className="loggedin-right">
-                    <ul class="location-buttons">
-                        <li className="loca-btns" onClick={this.handleLocation} value="sanfranciscoca">San Francisco</li>
-                        <li className="loca-btns" onClick={this.handleLocation} value="newyorkcity">New York City</li>
-                    </ul>
+                        <button className="location-buttons" onClick={this.handleLocation} value="sanfranciscoca">San Francisco</button>
+                        <button className="location-buttons" onClick={this.handleLocation} value="newyorkcity">New York City</button>
                     <button className="logout-button" onClick={this.logoutUser}>
                         Logout
                     </button>
