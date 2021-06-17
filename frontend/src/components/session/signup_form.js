@@ -99,7 +99,7 @@ class SignupForm extends React.Component {
               <br />
               <input className="session-submit" type="submit" value="Sign Up" />
               <br />
-
+              <br />
               <p className="policy-paragraph">
                 We may use your email and devices for updates and tips on
                 YouChoose's products and services and for activities

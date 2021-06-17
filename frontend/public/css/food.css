@@ -8,6 +8,7 @@ section.food-gallery {
     border-color: rgb(194, 194, 194);
     overflow-y: auto;
     border-radius: 20px;
+    min-width: 800px;
 }
 
 section.food-gallery div.slide-holder {

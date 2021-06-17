@@ -17,40 +17,21 @@ class NavBar extends React.Component {
 
     handleLocation(e) {
         e.preventDefault();
+
         this.props.receiveLocation(e.target.value);
     }
-
-    // Selectively render links dependent on whether the user is logged in
-    // getLinks() {
-    //     let display;
-    //     if (this.props.loggedIn) {
-    //         return display = (
-    //             <div className="loggedin-right">
-    //                 <button onClick={this.logoutUser}>Logout</button>
-    //             </div>
-    //         );
-    //     } else {
-    //         return display = (
-    //             <div className="login-buttons">
-    //                 <Link className="signup-button" to={'/signup'}>Signup</Link>
-    //                 <br />
-    //                 <Link className="loginup-button" to={'/login'}>Login</Link>
-    //             </div>
-    //         );
-    //     }
-    // }
 
     render() {
         let display;
         if (this.props.loggedIn) {
             display = (
-              <div className="loggedin-right">
-                <button className="location-btn" onClick={this.handleLocation} value="sanfranciscoca">San Francisco</button>
-                <button className="location-btn" onClick={this.handleLocation} value="newyorkcity">New York City</button>
-                <button className="logout-button" onClick={this.logoutUser}>
-                  Logout
-                </button>
-              </div>
+                <div className="loggedin-right">
+                        <button className="location-buttons" onClick={this.handleLocation} value="sanfranciscoca">San Francisco</button>
+                        <button className="location-buttons" onClick={this.handleLocation} value="newyorkcity">New York City</button>
+                    <button className="logout-button" onClick={this.logoutUser}>
+                        Logout
+                    </button>
+                </div>
             );
         } else {
             display = (
