@@ -11,11 +11,8 @@ class RestaurantList extends React.Component {
     }
 
     componentDidMount(){
-        // debugger
         let cuisine = this.props.cuisine
         let region = this.props.region
-        console.log(cuisine)
-        console.log(region)
         this.props.fetchRestaurantsByCuisine({cuisine: cuisine, location: region});
     }
 
@@ -52,13 +49,18 @@ class RestaurantList extends React.Component {
             )
         } else {
             return (
-                <div>
-                    <p>hi</p>
-                </div>
-            )
-
+              <div className="restaurant-list">
+                {Object.values(this.props.restaurants).map((restaurant) => {
+                  return <RestaurantContainer restaurant={restaurant} />;
+                })}
+              </div>
+            );
+        } else {
+            return null;
         }
+        
     }
 }
+
 
 export default RestaurantList;

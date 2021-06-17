@@ -15,7 +15,7 @@ const Wheel = props => {
     // }
 
     var options = ["Chinese", "Japanese","Vietnamese", "Indian", "Korean", "Mexican", "Italian", "American", "Vegan", "Mediterranean", "Thai", "Vegetarian", "French", "Irish", "Filipino"];
-    
+    // var options = ["Vietnamese"];
     var startAngle = 0;
     var arc = Math.PI / (options.length / 2);
     var spinTimeout = null;
