@@ -1,0 +1,53 @@
+.restaurant-page{
+    display: flex;
+    justify-content: space-around;
+    height: 95vh;
+}
+
+.restaurant-list {
+    background-color: #c3f3ff;
+    padding: 5px;
+    border-radius: 5px;
+    height: 85vh;
+    margin: 10px;
+    overflow-y: scroll;
+    color: white;
+    
+}
+
+.restaurant-list li{
+    cursor: pointer;
+    background-color: rgb(241, 182, 182);
+    text-shadow: 2px 2px 4px black;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+    margin-bottom: 10px;
+    height: 10vh;
+}
+
+.restaurant-list li:hover{
+    background-color: rgb(255, 208, 208);
+}
+
+.restaurant-list li.active{
+    background-color: rgb(184, 136, 136);
+}
+
+.restaurant-template{
+    background-color: #c3f3ff;
+    padding: 5px;
+    border-radius: 5px;
+    height: 85vh;
+    width: 60vw;
+    margin: 10px;
+    overflow-y: scroll;
+    color: white
+}
+
+.restaurant-template img{
+    height: 500px;
+    width: 500px;
+}
+
