@@ -15,7 +15,7 @@ class MainPage extends React.Component {
 
     if (hour < 11) {
       index = 0
-    } else if (hour > 11 && hour < 16) {
+    } else if (hour > 11 && hour < 17) {
       index = 1
     } else {
       index = 2
