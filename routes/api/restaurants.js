@@ -25,6 +25,25 @@ router.get("/search", (req, res) => {
     });
 });
 
+router.post("/search", (req, res) => {
+  const searchRequest = {
+    term: `${req.body.cuisine} food`,
+    location: `${req.body.location}`,
+  };
+
+  client
+    .search(searchRequest)
+    .then((response) => {
+      const firstResult = response.jsonBody.businesses.slice(0, 10);
+      const prettyJson = JSON.stringify(firstResult, null, 4);
+      console.log(req.body.cuisine);
+      res.json(firstResult);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+});
+
 // route to get all of the restaurants
 router.get("/", (req, res) => {
   Restaurant.find()

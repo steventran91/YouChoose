@@ -14,7 +14,7 @@ const App = () => (
     <NavBarContainer />
     <Switch>
       <ProtectedRoute exact path="/wheel" component={MainPage} />
-      <Route path="/restaurants" component={RestaurantListContainer} />
+      <ProtectedRoute path="/restaurants" component={RestaurantListContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <AuthRoute path="/" component={SplashContainer} />

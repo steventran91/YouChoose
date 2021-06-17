@@ -1,12 +1,25 @@
-// 'use strict';
-// const API_KEY = require('../config/yelp_api').YELP_API_KEY;
-// const yelp = require('yelp-fusion');
-// const client = yelp.client(API_KEY);
+'use strict';
+const API_KEY = require('../config/yelp_api').YELP_API_KEY;
+const yelp = require('yelp-fusion');
+const client = yelp.client(API_KEY);
 
 
+function searchCuisine({cuisine, location}) {
+    // const client = yelp.client(API_KEY);
+    const searchRequest = {
+        term: `${cuisine} food`,
+        location: `${location}`,
+    };
 
-// // function searchFood
-// // decide cuisine in the backend first
+    client.search(searchRequest).then(response => {
+        const results = response.jsonBody.businesses.slice(0, 10);
+        response.json(results);
+    }).catch(e => {
+        console.log(e);
+    })
+    
+};
+
 
 // const searchRequest = {
 //     term: `italian food`,

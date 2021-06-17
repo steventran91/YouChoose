@@ -101,7 +101,7 @@ export default function Slideshow({ images = [], interval = 3000 }) {
     //     }
     // }
 
-    return (
+     return (
         <section className="slideshow">
             <div className="slide-holder">
                 <section className="slide previous-slide">
