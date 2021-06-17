@@ -4,6 +4,23 @@
     height: 95vh;
 }
 
+.restaurant-you-choose{
+    border: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 0 0 4px black;
+    background-color: rgb(241, 182, 182);
+    box-shadow: 0 0 4px black;
+}
+
+.restaurant-you-choose:hover {
+    background-color: rgb(255, 208, 208);
+}
+
 .restaurant-list {
     background-color: #c3f3ff;
     padding: 5px;

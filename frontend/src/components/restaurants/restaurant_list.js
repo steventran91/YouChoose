@@ -8,6 +8,7 @@ class RestaurantList extends React.Component {
             index: 0
         }
         this.handleIndex = this.handleIndex.bind(this);
+
         // this.setRating = this.setRating.bind(this);
     }
 
@@ -18,7 +19,11 @@ class RestaurantList extends React.Component {
         console.log(cuisine)
         console.log(region)
         this.props.fetchRestaurantsByCuisine({ cuisine: cuisine, location: region });
+
+        this.handleRandom = this.handleRandom.bind(this);
     }
+
+ 
 
     componentDidUpdate() {
         console.log(this.props.cuisine)
@@ -29,6 +34,10 @@ class RestaurantList extends React.Component {
             e.preventDefault();
             this.setState({ index })
         }
+    }
+    handleRandom(e){
+        e.preventDefault();
+        this.setState({ index: Math.floor(Math.random() * Object.values(this.props.restaurants).length)})
     }
 
     // setRating(rating) {
@@ -41,6 +50,11 @@ class RestaurantList extends React.Component {
         if (this.props.restaurants) {
             return (
                 <div className="restaurant-page">
+                    <button 
+                    onClick={this.handleRandom}
+                    className="restaurant-you-choose">
+                        You Choose
+                    </button>
                     <ul className="restaurant-list">
                         {Object.values(this.props.restaurants).map((restaurant, index) => {
                             // return <RestaurantContainer restaurant={restaurant} />
@@ -72,7 +86,9 @@ class RestaurantList extends React.Component {
                 </div>
             )
         }
+        
     }
 }
+
 
 export default RestaurantList;
