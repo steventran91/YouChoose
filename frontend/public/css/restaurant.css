@@ -29,7 +29,7 @@
     margin: 10px;
     overflow-y: scroll;
     color: white;
-    
+    width: 400px;
 }
 
 .restaurant-list li{
@@ -41,7 +41,14 @@
     padding: 5px;
     margin: 20px;
     margin-bottom: 10px;
-    height: 10vh;
+    height: 12vh;
+    text-align: center;
+    font-size: 22px;
+    color: rgb(236, 236, 236);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .restaurant-list li:hover{
@@ -49,7 +56,7 @@
 }
 
 .restaurant-list li.active{
-    background-color: rgb(184, 136, 136);
+    background-color: rgb(201, 255, 151);
 }
 
 .restaurant-template{
@@ -60,11 +67,54 @@
     width: 60vw;
     margin: 10px;
     overflow-y: scroll;
-    color: white
+    color: white;
+    display: flex;
+    justify-content: space-between;
 }
 
 .restaurant-template img{
-    height: 500px;
-    width: 500px;
+    height: 80%;
+    width: 80%;
+    float: right;
 }
 
+.temp-left {
+    font-size: 30px;
+    color: rgb(93, 93, 93);
+}
+
+.star-ratings {
+    display: flex;
+    justify-content: center;
+}
+
+.star-ratings-css-product {
+    unicode-bidi: bidi-override;
+    color: #c5c5c5;
+    font-size: 25px;
+    height: 25px;
+    width: 100px;
+    margin: 0;
+    position: relative;
+    padding: 0;
+    text-shadow: 0px 1px 0 #a2a2a2;
+}
+
+.star-ratings-css-product-top {
+      color: #ff8c40;
+      padding: 0;
+      position: absolute;
+      z-index: 1;
+      display: block;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: 3.5em;
+}
+
+.star-ratings-css-product-bottom {
+      padding: 0;
+      display: block;
+      z-index: 0;
+}
+  
