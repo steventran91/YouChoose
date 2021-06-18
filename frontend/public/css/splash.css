@@ -166,14 +166,15 @@ section.slideshow div.slideshow-controller span:active {
     margin-bottom: 10px;
     width: 80%;
     align-items: center;
-    min-width: 300px
+    min-width: 300px;
 }
 
 .splash-text {
     text-align: center;
     font-size: 20px;
     color: rgb(42, 42, 42);
-    font-family: cursive;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* background-color: ; */
     overflow-y: auto;
 }
 
