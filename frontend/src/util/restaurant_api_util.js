@@ -12,6 +12,10 @@ export const getRestaurantsByCuisine = (restaurantData) => {
     return axios.post(`/api/restaurants/search`, restaurantData)
 }
 
-export const getFavoriteRestaurants = (user) => {
+export const getFavoriteRestaurant = (user) => {
     return axios.post(`/api/users/favorites`, user)
+}
+
+export const removeFavoriteRestaurant = (restaurantId) => {
+    return axios.delete(`/api/users/favorites/${restaurantId}`);
 }

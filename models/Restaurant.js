@@ -4,11 +4,9 @@ const Schema = mongoose.Schema;
 const RestaurantSchema = new Schema({
     name: {
         type: String,
-        required: true
     },
     category: {
         type: String,
-        required: true
     },
     ratings: {
         type: Number
@@ -16,6 +14,10 @@ const RestaurantSchema = new Schema({
     isFavorited: {
         type: Boolean,
         default: false
+    },
+    userId: {
+        type: String,
+        required: true
     }
 });
 

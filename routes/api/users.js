@@ -103,7 +103,8 @@ router.post('/favorites', (req,res) => {
             name: req.body.name,
             category: req.body.category,
             ratings: req.body.ratings,
-            isFavorited: true
+            isFavorited: true,
+            userId: user.id
         });
         newRestaurant
           .save()
@@ -115,6 +116,18 @@ router.post('/favorites', (req,res) => {
 
     }else{
         return res.status(400);
+    }
+})
+
+router.delete('/favorites/:restaurantId', (req, res) => {
+    let user = User.findOne({ username: req.body.username });
+    let restaurant = Restaurant.findOne({id: req.body.id});
+    if (user) {
+      if (user.id === restaurant.userId) {
+          res.json.delete
+      }
+    } else {
+      return res.status(400);
     }
 })
 

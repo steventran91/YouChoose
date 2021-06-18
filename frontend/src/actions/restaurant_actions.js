@@ -1,8 +1,9 @@
-import { getRestaurant, getRestaurants, getRestaurantsByCuisine, getFavoriteRestaurants } from '../util/restaurant_api_util';
+import { getRestaurant, getRestaurants, getRestaurantsByCuisine, getFavoriteRestaurant } from '../util/restaurant_api_util';
 
 export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
-export const RECEIVE_FAVORITE_RESTAURANTS = "RECEIVE_FAVORITE_RESTAURANTS";
+export const RECEIVE_FAVORITE_RESTAURANT = "RECEIVE_FAVORITE_RESTAURANT";
+export const DELETE_FAVORITE_RESTAURANT = "DELETE_FAVORITE_RESTAURANT";
 
 
 export const receiveRestaurants = (restaurants) => ({
@@ -15,10 +16,17 @@ export const receiveRestaurant = (restaurant) => ({
     restaurant
 });
 
-export const receiveFavoriteRestaurants = (restaurantId) => ({
-    type: RECEIVE_FAVORITE_RESTAURANTS,
+export const receiveFavoriteRestaurant = (restaurantId) => ({
+    type: RECEIVE_FAVORITE_RESTAURANT,
     restaurantId
 })
+
+export const deleteFavoriteRestaurant = (restaurantId) => ({
+    type: DELETE_FAVORITE_RESTAURANT,
+    restaurantId
+});
+
+// -----------------------------------
 
 export const fetchRestaurants = () => (dispatch) => 
     getRestaurants()
@@ -35,7 +43,10 @@ export const fetchRestaurantsByCuisine = (restaurantData) => (dispatch) =>
         .then((restaurants) => dispatch(receiveRestaurants(restaurants)))
         .catch((err) => console.log(err));
 
-export const fetchFavoriteRestaurant = (user) => dispatch => {
-    getFavoriteRestaurants(user)
-        .then((restaurantId) => dispatch(receiveFavoriteRestaurants(restaurantId)))
-}
+export const fetchFavoriteRestaurant = (user) => dispatch => 
+    getFavoriteRestaurant(user)
+        .then((restaurantId) => dispatch(receiveFavoriteRestaurant(restaurantId)))
+        .catch((err) => console.log(err));
+
+export const removeFavoriteRestaurant = ()
+
