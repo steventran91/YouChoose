@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const User = require('../../models/User');
+const Restaurant = require('../../models/Restaurant');
 const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const passport = require('passport');
@@ -70,7 +71,7 @@ router.post("/login", (req, res) => {
 
         bcrypt.compare(password, user.password).then(isMatch => {
             if (isMatch) {
-                const payload = { id: user.id, username: user.username };
+                const payload = { id: user.id, username: user.username , favorites: []};
 
                 jwt.sign(payload, keys.secretOrKey, { expiresIn: 3600 }, (err, token) => {
                     res.json({
@@ -94,13 +95,29 @@ router.get('/current', passport.authenticate('jwt', { session: false }), (req, r
     });
 })
 
+router.post('/favorites', (req,res) => {
+   let user =  User.findOne({ username: req.body.username });
+    if(user){
+        const newRestaurant = new Restaurant({
+            id: req.body.id,
+            name: req.body.name,
+            category: req.body.category,
+            ratings: req.body.ratings,
+            isFavorited: true
+        });
+        newRestaurant
+          .save()
+          .then((restaurant) => {
+            // const restaurantPayload = { id: restaurant.id }
+            res.json(restaurant)
+          })
+          .catch((err) => console.log(err));
+
+    }else{
+        return res.status(400);
+    }
+})
 
 
-// router.post("/demologin", (req, res) => {
-
-//     const username = req.body.username;
-//     const password = req.body.password;
-
-// })
 
 module.exports = router;

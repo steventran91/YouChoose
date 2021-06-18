@@ -6,16 +6,16 @@ const RestaurantSchema = new Schema({
         type: String,
         required: true
     },
-    description: {
-        type: String,
-        required: true
-    },
     category: {
         type: String,
         required: true
     },
     ratings: {
         type: Number
+    },
+    isFavorited: {
+        type: Boolean,
+        default: false
     }
 });
 
