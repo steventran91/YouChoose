@@ -1,24 +1,23 @@
 import React from "react";
-import morning from './images/morning.jpeg'
-import afternoon from './images/afternoon.jpeg'
+import morning from "./images/morning.jpeg";
+import afternoon from "./images/afternoon.jpeg";
 import night from "./images/night.jpeg";
-import Wheel from "../the_wheel/wheel"
-import WheelContainer from '../the_wheel/wheel_container';
-
+import Wheel from "../the_wheel/wheel";
+import WheelContainer from "../the_wheel/wheel_container";
 
 class MainPage extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     let today = new Date();
     let hour = today.getHours();
     let index = 0;
 
     if (hour < 11) {
-      index = 0
+      index = 0;
     } else if (hour > 11 && hour < 17) {
-      index = 1
+      index = 1;
     } else {
-      index = 2
+      index = 2;
     }
 
     this.state = {
@@ -26,59 +25,48 @@ class MainPage extends React.Component {
       imgList: [morning, afternoon, night],
       modalActive: false,
       location: "sanfrancisco",
-  
-    }
+    };
 
     this.handleMorningClick = this.handleMorningClick.bind(this);
     this.handleNoonClick = this.handleNoonClick.bind(this);
     this.handleNightClick = this.handleNightClick.bind(this);
     this.modalSwitch = this.modalSwitch.bind(this);
     this.selectLocation = this.selectLocation.bind(this);
-    // this.handleTag = this.handleTag.bind(this);
+    this.handleTag = this.handleTag.bind(this);
   }
 
-  // handleTag() {
-  //   if (this.state.index !== 0) {
-  //     this.setState({
-  //       tag: 0 
-  //     });
-  //   } else if (this.state.index !== 1) {
-  //     this.setState({
-  //       tag: 1
-  //     });
-  //   } else {
-  //     this.setState({
-  //       tag: 2
-  //     });
-  //   }
-  // };
+  
+
+  handleTag(value) {
+    this.props.receiveTag(value)
+  }
 
   selectLocation(e) {
-    e.preventDefault()
-    this.setState({ location: e.target.value })
+    e.preventDefault();
+    this.setState({ location: e.target.value });
   }
 
   handleMorningClick() {
     if (this.state.index !== 0) {
       this.setState({
-        index: 0
-      })
+        index: 0,
+      });
     }
   }
 
   handleNoonClick() {
     if (this.state.index !== 1) {
       this.setState({
-        index: 1
-      })
+        index: 1,
+      });
     }
   }
 
   handleNightClick() {
     if (this.state.index !== 2) {
       this.setState({
-        index: 2
-      })
+        index: 2,
+      });
     }
   }
 
@@ -93,13 +81,13 @@ class MainPage extends React.Component {
           src={this.state.imgList[this.state.index]}
           className="backgroundImg"
         />
-        <div className="all-buttons" >
+        <div className="all-buttons">
           <button
             className="breakfast-button"
             onClick={() => {
               this.handleMorningClick();
               this.modalSwitch();
-              // this.handleTag();
+              this.handleTag("breakfast");
             }}
           >
             Breakfast
@@ -109,7 +97,7 @@ class MainPage extends React.Component {
             onClick={() => {
               this.handleNoonClick();
               this.modalSwitch();
-              // this.handleTag();
+              this.handleTag("lunch");
             }}
           >
             Lunch
@@ -119,7 +107,7 @@ class MainPage extends React.Component {
             onClick={() => {
               this.handleNightClick();
               this.modalSwitch();
-              // this.handleTag();
+              this.handleTag("dinner");
             }}
           >
             Dinner

@@ -7,6 +7,7 @@ export const RECEIVE_USER_LOGOUT = "RECEIVE_USER_LOGOUT";
 export const RECEIVE_USER_SIGN_IN = "RECEIVE_USER_SIGN_IN";
 export const RECEIVE_LOCATION = "RECEIVE_LOCATION";
 export const RECEIVE_CUISINE = "RECEIVE_CUISINE";
+export const RECEIVE_TAG = "RECEIVE_TAG";
 
 export const receiveCurrentUser = currentUser => ({
     type: RECEIVE_CURRENT_USER,
@@ -34,6 +35,11 @@ export const receiveLocation = location => ({
 export const receiveCuisine = cuisine => ({
     type: RECEIVE_CUISINE,
     cuisine
+})
+
+export const receiveTag = tag => ({
+    type: RECEIVE_TAG,
+    tag
 })
 
 export const signup = (user) => (dispatch) => (

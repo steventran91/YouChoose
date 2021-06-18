@@ -3,7 +3,8 @@ import {
   RECEIVE_USER_LOGOUT,
   RECEIVE_USER_SIGN_IN,
   RECEIVE_LOCATION,
-  RECEIVE_CUISINE
+  RECEIVE_CUISINE,
+  RECEIVE_TAG,
 } from "../actions/session_actions";
 
 const initialState = {
@@ -35,6 +36,11 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 cuisine: action.cuisine
+            };
+        case RECEIVE_TAG:
+            return {
+                ...state,
+                tag: action.tag
             };
         default:
             return state;

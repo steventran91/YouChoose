@@ -13,8 +13,9 @@ class RestaurantList extends React.Component {
 
     componentDidMount(){
         let cuisine = this.props.cuisine
-        let region = this.props.region
-        this.props.fetchRestaurantsByCuisine({cuisine: cuisine, location: region});
+        let location = this.props.region
+        let tag = this.props.tag
+        this.props.fetchRestaurantsByCuisine({tag, cuisine, location});
     }
 
     componentDidUpdate() {
