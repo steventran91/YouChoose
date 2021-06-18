@@ -81,7 +81,7 @@ class MainPage extends React.Component {
           src={this.state.imgList[this.state.index]}
           className="backgroundImg"
         />
-        <div className="all-buttons">
+        <div className={`main-button-holder${this.state.modalActive ? " active" : ""}`} >
           <button
             className="breakfast-button"
             onClick={() => {
