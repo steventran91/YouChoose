@@ -10,7 +10,6 @@ class Restaurant extends React.Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="restaurant-template">
         <div className="temp-left">

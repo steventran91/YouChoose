@@ -8,6 +8,7 @@ class RestaurantList extends React.Component {
             index: 0
         }
         this.handleIndex = this.handleIndex.bind(this);
+        this.handleRandom = this.handleRandom.bind(this);
 
         // this.setRating = this.setRating.bind(this);
     }
