@@ -1,6 +1,7 @@
 import React from 'react';
 import RestaurantContainer from './restaurants_container';
 
+
 class RestaurantList extends React.Component {
     constructor(props) {
         super(props);
