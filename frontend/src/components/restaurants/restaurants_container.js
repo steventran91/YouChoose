@@ -5,7 +5,6 @@ import { receiveLocation, receiveCuisine } from '../../actions/session_actions';
 
 const mSTP = (state) => {
     return {
-        // restaurants: Object.values(state.restaurants.all)
         region: state.session.location,
         cuisine: state.session.cuisine
     };
