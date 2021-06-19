@@ -4,38 +4,24 @@ class Restaurant extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-          active: false
+          active: false,
+          favoriteList: {}
         }
         this.addToFavorite = this.addToFavorite.bind(this);
     }
 
     addToFavorite(e){
       e.preventDefault()
-      // console.log(this.props)
-      let favorites = this.props.currentUser;
-      let currentRestaurant = this.props.restaurant.id;
-      this.props.fetchFavoriteRestaurant({
-        username: this.props.currentUser.username,
-        id: currentRestaurant
-      }) 
-      console.log(favorites);
-      console.log(currentRestaurant);
-
-      // if(this.state.active === false){
-      //   this.setState({
-      //     active: true
-      //   })
-      //   favorites.push(currentRestaurant);
-      // }else{
-      //   if(favorites.includes(currentRestaurant)){
-      //     let index = favorites.indexOf(currentRestaurant)
-      //     delete favorites[index]
-      //   }
-      //   this.setState({
-      //     active: false,
-      //   });
-      // }
-      
+      let favorites = this.props.currentUser.favorites;
+      let currentRestaurant = this.props.restaurant;
+      if(!Object.keys(favorites).includes(currentRestaurant.id)){
+        favorites[currentRestaurant.id] = currentRestaurant;
+      }else{
+          delete favorites[currentRestaurant.id]
+          favorites[currentRestaurant.id] = null
+          // this.props.helperFavorite()
+      }
+      this.setState({})
     }
 
     render(){
@@ -47,7 +33,7 @@ class Restaurant extends React.Component {
             <p>Price: {this.props.restaurant.price}</p>
             <p>Rating: {this.props.restaurant.rating}</p>
             <img src={this.props.restaurant.image_url} />
-            <button className={this.state.active ? "fav-button-act" : "fav-but"} onClick={(e => this.addToFavorite(e))}> Favorite</button>
+            <button className={this.props.currentUser.favorites[this.props.restaurant.id] ? "fav-button-act" : "fav-but"} onClick={(e => this.addToFavorite(e))}> Favorite</button>
           </div>
         );
     }

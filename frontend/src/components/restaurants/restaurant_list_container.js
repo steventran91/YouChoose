@@ -6,7 +6,8 @@ const mSTP = (state) => {
   return {
     cuisine: state.session.cuisine,
     region: state.session.location,
-    restaurants: state.restaurants.data
+    restaurants: state.restaurants.data,
+    favoriteRestaurants: state.session.user.favorites
   };
   
 };
