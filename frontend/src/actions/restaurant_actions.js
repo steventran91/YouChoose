@@ -48,5 +48,8 @@ export const fetchFavoriteRestaurant = (user) => dispatch =>
         .then((restaurantId) => dispatch(receiveFavoriteRestaurant(restaurantId)))
         .catch((err) => console.log(err));
 
-export const removeFavoriteRestaurant = ()
+export const removeFavoriteRestaurant = (restaurantId) => (dispatch) =>
+  removeFavoriteRestaurant(restaurantId)
+    .then((restaurantId) => dispatch(deleteFavoriteRestaurant(restaurantId)))
+    .catch((err) => console.log(err));
 

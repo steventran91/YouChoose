@@ -124,7 +124,7 @@ router.delete('/favorites/:restaurantId', (req, res) => {
     let restaurant = Restaurant.findOne({id: req.body.id});
     if (user) {
       if (user.id === restaurant.userId) {
-          res.json.delete
+          res.json.delete(restaurant)
       }
     } else {
       return res.status(400);

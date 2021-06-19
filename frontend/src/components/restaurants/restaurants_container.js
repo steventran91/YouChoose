@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { fetchRestaurantsByCuisine, fetchFavoriteRestaurant } from '../../actions/restaurant_actions';   
+import { fetchRestaurantsByCuisine, fetchFavoriteRestaurant, removeFavoriteRestaurant } from '../../actions/restaurant_actions';   
 import Restaurants from './restaurants';
 import { receiveLocation, receiveCuisine } from '../../actions/session_actions';
 
@@ -15,6 +15,7 @@ const mDTP = (dispatch) => {
     return {
       fetchRestaurantsByCuisine: (restaurantData) => dispatch(fetchRestaurantsByCuisine(restaurantData)),
       fetchFavoriteRestaurant: (user) => dispatch(fetchFavoriteRestaurant(user)),
+      removeFavoriteRestaurant: (restaurantId) => dispatch(removeFavoriteRestaurant(restaurantId)),
     };
 };
 
