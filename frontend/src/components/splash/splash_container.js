@@ -8,10 +8,10 @@ const mSTP = state => {
     };
 }
 
-const mDTP = dispatch => {
-    return {
+// const mDTP = dispatch => {
+//     return {
         
-    }
-}
+//     }
+// }
 
 export default connect(mSTP, null)(SplashPage)

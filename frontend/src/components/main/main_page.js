@@ -2,7 +2,6 @@ import React from "react";
 import morning from "./images/morning.jpeg";
 import afternoon from "./images/afternoon.jpeg";
 import night from "./images/night.jpeg";
-import Wheel from "../the_wheel/wheel";
 import WheelContainer from "../the_wheel/wheel_container";
 
 class MainPage extends React.Component {
@@ -80,6 +79,7 @@ class MainPage extends React.Component {
         <img
           src={this.state.imgList[this.state.index]}
           className="backgroundImg"
+          alt="backgroundImg"
         />
         <div className={`main-button-holder${this.state.modalActive ? " active" : ""}`} >
           <button
