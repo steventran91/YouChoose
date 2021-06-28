@@ -163,13 +163,11 @@ const Wheel = props => {
 
         const canvas = canvasRef.current
         // const context = canvas.getContext('2d')
-        let frameCount = 0
         let animationFrameId
 
         //Our draw came here
         const render = () => {
-            frameCount++
-            drawRouletteWheel(canvas, frameCount)
+            drawRouletteWheel(canvas)
             animationFrameId = window.requestAnimationFrame(render)
         }
         render()
