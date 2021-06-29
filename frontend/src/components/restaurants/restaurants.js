@@ -47,4 +47,5 @@ class Restaurant extends React.Component {
 
   }
 }
+// tryna fix 
 export default Restaurant;
