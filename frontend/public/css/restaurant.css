@@ -27,6 +27,11 @@
     height: 10vh;
 }
 
+.restaurant-list {
+    width: 300px;
+    float: left;
+}
+
 .restaurant-list li:hover{
     background-color: rgb(255, 208, 208);
 }
@@ -43,7 +48,7 @@
     width: 60vw;
     margin: 10px;
     overflow-y: scroll;
-    color: white
+    color: rgb(34, 34, 34)
 }
 
 .restaurant-template img{
@@ -53,8 +58,86 @@
 
 .fav-button-act{
     background-color: yellow;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: 30px;
+    margin-top: 40px;
+    border: none;
+}
+
+.fav-button-act:before,
+.fav-button-act:after{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: yellow;
+}
+
+.fav-button-act:before{
+  bottom: 0px;
+  left: -30px;
+}
+
+.fav-button-act:after{
+  top: -30px;
+  right: 0px;
 }
 
 .fav-but{
     background-color: crimson;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: 30px;
+    margin-top: 40px;
+    border: none;
+}
+
+.fav-but:before,
+.fav-but:after{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: crimson;
+}
+
+.fav-but:before{
+  bottom: 0px;
+  left: -30px;
+}
+
+.fav-but:after{
+  top: -30px;
+  right: 0px;
+}
+
+.favorites-button {
+    height: 80px;
+    width: 120px;
+    background-color: rgb(212, 212, 212);
+    text-align: center;
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
 }

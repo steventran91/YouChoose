@@ -224,10 +224,11 @@
 .policy-paragraph {
     font-size: 14px;
     width: 500px;
+    font-weight: bold;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(255, 255, 255);
-    opacity: 80%;
+    opacity: 90%;
 }
 
 .session-submit {

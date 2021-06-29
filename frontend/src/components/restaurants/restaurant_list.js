@@ -47,7 +47,7 @@ class RestaurantList extends React.Component {
         if (this.props.restaurants && !this.state.activated) {
             return(
                 <div className="restaurant-page">
-                    <button onClick={e => this.handleFavorites(e)}>Favorites</button>
+                    <button className="favorites-button" onClick={e => this.handleFavorites(e)}>Favorites</button>
                     <ul className="restaurant-list">
                         {Object.values(this.props.restaurants).map((restaurant, index) => {
                             // return <RestaurantContainer restaurant={restaurant} />
@@ -64,10 +64,11 @@ class RestaurantList extends React.Component {
                     </div>
                 </div>
             )
-        } else if(this.state.activated) {
+        } 
+        else if (this.state.activated) {
             return (
               <div className="restaurant-page">
-                <button onClick={(e) => this.handleFavorites(e)}>
+                <button className="favorites-button" onClick={(e) => this.handleFavorites(e)}>
                   Restaurant List
                 </button>
                 <ul className="restaurant-list">
@@ -100,7 +101,9 @@ class RestaurantList extends React.Component {
             );
         }else{
             return(
-            <div></div>
+            <div>
+              nothing is here
+            </div>
             )
         }
         
