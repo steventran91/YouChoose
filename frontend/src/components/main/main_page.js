@@ -132,7 +132,7 @@ class MainPage extends React.Component {
           </button>
         </div>
         <WheelContainer
-          active={this.state.modalActive}
+          modalactive={this.state.modalActive}
           modalSwitch={this.modalSwitch}
         />
         <footer>Copyright &copy; 2021 SHEEEESH</footer>
