@@ -3,6 +3,7 @@ import React, { useRef, useEffect } from 'react'
 
 
 const Wheel = props => {
+    // const { to, staticContext, ...rest } = props;
 
     const canvasRef = useRef(null)
 
@@ -180,8 +181,10 @@ const Wheel = props => {
         }
     }, [drawRouletteWheel])
 
+    //console.log(props.active())
+
     return (
-        <div className={`modal${props.active ? " active" : ""}`}>
+        <div className={`modal${props.modalactive ? " active" : ""}`}>
             <div className="modal-screen" onClick={props.modalSwitch}></div>
             <div className="wheel-container">
                 <canvas ref={canvasRef} {...props} width="500" height="500" />
