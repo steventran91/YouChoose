@@ -14,7 +14,7 @@ const Wheel = props => {
     //     ctx.fill()
     // }
 
-    let options = ["Chinese", "Japanese","Vietnamese", "Indian", "Korean", "Mexican", "Italian", "American", "Vegan", "Mediterranean", "Thai", "Vegetarian", "French", "Irish", "Filipino"];
+    let options = ["Chinese", "Japanese","Vietnamese", "Indian", "Korean", "Mexican", "Italian", "American", "Vegan", "Greek", "Thai", "Vegetarian", "French", "Irish", "Filipino"];
     // let options = ["American"];
     let startAngle = 0;
     let arc = Math.PI / (options.length / 2);
@@ -51,6 +51,7 @@ const Wheel = props => {
     }
 
     let spinAngleStart;
+
     function spin() {
         spinAngleStart = Math.random() * 10 + 10;
         spinTime = 0;
@@ -80,7 +81,7 @@ const Wheel = props => {
         let arcd = arc * 180 / Math.PI;
         let index = Math.floor((360 - degrees % 360) / arcd);
         ctx.save();
-        ctx.font = 'bold 30px Didot, serif';
+        ctx.font = 'bold 30px Arial, serif';
         let text = options[index];
         props.receiveCuisine(text);
         console.log(text);
@@ -106,8 +107,7 @@ const Wheel = props => {
 
             ctx.strokeStyle = "black";
             ctx.lineWidth = 2;
-
-            ctx.font = 'bold 12px Didot, serif';
+            ctx.font = 'bold 12px Arial, serif';
 
             for (let i = 0; i < options.length; i++) {
                 let angle = startAngle + i * arc;
@@ -121,15 +121,18 @@ const Wheel = props => {
                 ctx.fill();
 
                 ctx.save();
-                ctx.shadowOffsetX = -1;
-                ctx.shadowOffsetY = -1;
+                // ctx.shadowOffsetX = -1;
+                // ctx.shadowOffsetY = -2;
                 ctx.shadowBlur = 0;
-                ctx.shadowColor = "rgb(220,220,220)";
-                ctx.fillStyle = "black";
+                ctx.shadowColor = "rgb(0, 0, 0)";
+                ctx.strokeStyle = "rgb(0, 0, 0)"
+                ctx.fillStyle = "white";
+                ctx.lineWidth = 2;
                 ctx.translate(250 + Math.cos(angle + arc / 2) * textRadius,
                     250 + Math.sin(angle + arc / 2) * textRadius);
                 ctx.rotate(angle + arc / 2 + Math.PI / 2);
                 let text = options[i];
+                ctx.strokeText(text, -ctx.measureText(text).width / 2, 0);
                 ctx.fillText(text, -ctx.measureText(text).width / 2, 0);
                 ctx.restore();
             }
@@ -152,7 +155,7 @@ const Wheel = props => {
             let index = Math.floor((360 - degrees % 360) / arcd);
             ctx.save();
             // font - family: ;
-            ctx.font = 'bold 30px Didot, serif';
+            ctx.font = 'bold 30px Arial, serif';
             let text = options[index];
             ctx.fillText(text, 250 - ctx.measureText(text).width / 2, 250 + 10);
             ctx.restore();
