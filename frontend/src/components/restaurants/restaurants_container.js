@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { fetchRestaurantsByCuisine } from '../../actions/restaurant_actions';   
 import Restaurants from './restaurants';
-import { receiveLocation, receiveCuisine } from '../../actions/session_actions';
+// import { receiveLocation, receiveCuisine } from '../../actions/session_actions';
 
 const mSTP = (state) => {
     return {
