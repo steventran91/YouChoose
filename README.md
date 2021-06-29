@@ -1,6 +1,6 @@
 # YouChoose
 
-YouChoose is an for all the people that can't decide where to go or what to eat! YouChoose is built with the MERN stack(MongoDB, Express, React, and Node).
+YouChoose is an for app the people that can't decide where to go or what to eat! YouChoose is built with the MERN stack(MongoDB, Express, React, and Node).
 
 # Group Members
 * Steven Tran
