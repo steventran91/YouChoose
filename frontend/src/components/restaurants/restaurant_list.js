@@ -6,7 +6,8 @@ class RestaurantList extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            index: 0
+            index: 0,
+            activated: false
         }
         this.handleIndex = this.handleIndex.bind(this);
         this.handleRandom = this.handleRandom.bind(this);
@@ -43,17 +44,22 @@ class RestaurantList extends React.Component {
     //     { document.getElementsByClassName(`.stars-inner`).style.width = rating }
     // }
 
-    render() {
+
         // document.getElementsByClassName(`.stars-inner`).style.width = this.props.restaurant.rating
 
-        if (this.props.restaurants) {
-            return (
+    handleFavorites(e){
+        e.preventDefault()
+        this.setState({
+            activated: !this.state.activated,
+            index: 0
+        })
+    };
+
+    render(){
+        if (this.props.restaurants && !this.state.activated) {
+            return(
                 <div className="restaurant-page">
-                    <button 
-                    onClick={this.handleRandom}
-                    className="restaurant-you-choose">
-                        You Choose
-                    </button>
+                    <button className="favorites-button" onClick={e => this.handleFavorites(e)}>Favorites</button>
                     <ul className="restaurant-list">
                         {Object.values(this.props.restaurants).map((restaurant, index) => {
                             // return <RestaurantContainer restaurant={restaurant} />
@@ -74,20 +80,54 @@ class RestaurantList extends React.Component {
                         })}
                     </ul>
                     <div className="restaurant-show">
-                        <RestaurantContainer restaurant={Object.values(this.props.restaurants)[this.state.index]} />
+                        <RestaurantContainer restaurant={Object.values(this.props.restaurants)[this.state.index]}  />
                     </div>
                 </div>
             )
-        } else {
+        } 
+        else if (this.state.activated) {
             return (
-                <div>
-                    <p>hi</p>
+              <div className="restaurant-page">
+                <button className="favorites-button" onClick={(e) => this.handleFavorites(e)}>
+                  Restaurant List
+                </button>
+                <ul className="restaurant-list">
+                  {Object.values(this.props.favoriteRestaurants).map(
+                    (restaurant, index) => {
+                      // return <RestaurantContainer restaurant={restaurant} />
+                      return (
+                        <li
+                          className={this.state.index === index ? "active" : ""}
+                          onClick={this.handleIndex(index)}
+                          key={index}
+                        >
+                          {restaurant.name}
+                        </li>
+                      );
+                    }
+                  )}
+                </ul>
+                <div className="restaurant-show">
+                  <RestaurantContainer
+                    
+                    restaurant={
+                      Object.values(this.props.favoriteRestaurants)[
+                        this.state.index
+                      ]
+                    }
+                  />
                 </div>
+              </div>
+            );
+        }else{
+            return(
+            <div>
+              nothing is here
+            </div>
             )
         }
         
     }
 }
-
 
 export default RestaurantList;

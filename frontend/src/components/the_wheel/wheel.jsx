@@ -15,11 +15,12 @@ const Wheel = props => {
     //     ctx.fill()
     // }
 
-    let options = ["Chinese", "Japanese","Vietnamese", "Indian", "Korean", "Mexican", "Italian", "American", "Vegan", "Greek", "Thai", "Vegetarian", "French", "Irish", "Filipino"];
-    // let options = ["American"];
-    let startAngle = 0;
-    let arc = Math.PI / (options.length / 2);
-    let spinTimeout = null;
+    var options = ["Chinese", "Japanese","Vietnamese", "Indian", "Korean", "Mexican", "Italian", "American", "Vegan", "Mediterranean", "Thai", "Vegetarian", "French", "Irish", "Filipino"];
+    // var options = ["Vietnamese"];
+    var startAngle = 0;
+    var arc = Math.PI / (options.length / 2);
+    var spinTimeout = null;
+
 
     // let spinArcStart = 10;
     let spinTime = 0;
