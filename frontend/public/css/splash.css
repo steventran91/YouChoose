@@ -187,7 +187,7 @@ section.slideshow div.slideshow-controller span:active {
     display: flex;
     justify-content: center;
     background-color: #c3f3ff;
-    height: 200px;
+    height: 300px;
     margin-left: 40px;
     margin-right: 40px;
     margin-top: 20px;
@@ -223,4 +223,37 @@ section.slideshow div.slideshow-controller span:active {
     padding-top: 20px;
     margin-left: 70px;
     margin-right: 70px;
+}
+
+.fa {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+
+/* .brenda-hover {
+    display: none;
+    font-size: 20px;
+  }
+  
+  .brenda-1:hover>.brenda-hover {
+    top: 1em;
+    right: 3em;
+    width: 25%;
+    background: #888;
+    border: 1px solid black;
+    padding: 10px;
+    z-index: 1;
+  }
+  
+  .brenda-1 {
+    height: 50px;
+    width: 50%;
+    text-decoration: none;
+  } */
+
+.our-pics {
+    width:  120px;
+    height: 120px;
+    object-fit: cover;
 }
