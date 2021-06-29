@@ -31,14 +31,29 @@ class MainPage extends React.Component {
     this.handleNightClick = this.handleNightClick.bind(this);
     this.modalSwitch = this.modalSwitch.bind(this);
     this.selectLocation = this.selectLocation.bind(this);
+
     this.handleTag = this.handleTag.bind(this);
   }
-
-  
 
   handleTag(value) {
     this.props.receiveTag(value)
   }
+
+  // handleTag() {
+  //   if (this.state.index !== 0) {
+  //     this.setState({
+  //       tag: 0 
+  //     });
+  //   } else if (this.state.index !== 1) {
+  //     this.setState({
+  //       tag: 1
+  //     });
+  //   } else {
+  //     this.setState({
+  //       tag: 2
+  //     });
+  //   }
+  // };
 
   selectLocation(e) {
     e.preventDefault();
@@ -97,7 +112,9 @@ class MainPage extends React.Component {
             onClick={() => {
               this.handleNoonClick();
               this.modalSwitch();
+              // this.handleTag();
               this.handleTag("lunch");
+
             }}
           >
             Lunch
@@ -107,6 +124,7 @@ class MainPage extends React.Component {
             onClick={() => {
               this.handleNightClick();
               this.modalSwitch();
+              // this.handleTag();
               this.handleTag("dinner");
             }}
           >

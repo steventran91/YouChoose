@@ -60,11 +60,30 @@ router.get("/", (req, res) => {
     .catch((err) => res.status(400).json(err));
 });
 
+router.post("/", (req, res) => {
+  // req.body
+  Restaurant.find()
+    .then((restaurants) => res.json(restaurants))
+    .catch((err) => res.status(400).json(err));
+});
+
 // route to get a specific restaurant
 router.get("/:restaurant_id", (req, res) => {
   Restaurant.find({ id: req.params.id }) //restaurant_id
     .then((restaurant) => res.json(restaurant))
     .catch((err) => res.status(400).json(err));
 });
+
+router.get("/favorites", (req,res) => {
+  Restaurant.find({id: req.params.id})
+  client.businessMatch({ id})
+})
+
+router.post("/favorites", (req,res) => {
+  Restaurant.find({ id: req.body.id })
+    .then((restaurant) => res.json(restaurant))
+    .catch((err) => res.status(400).json(err));
+  client.businessMatch({ id})
+})
 
 module.exports = router;
