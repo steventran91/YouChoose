@@ -44,7 +44,7 @@ class RestaurantList extends React.Component {
     //     { document.getElementsByClassName(`.stars-inner`).style.width = rating }
     // }
 
-    render() {
+
         // document.getElementsByClassName(`.stars-inner`).style.width = this.props.restaurant.rating
 
     handleFavorites(e){
@@ -53,7 +53,7 @@ class RestaurantList extends React.Component {
             activated: !this.state.activated,
             index: 0
         })
-    }
+    };
 
     render(){
         if (this.props.restaurants && !this.state.activated) {
