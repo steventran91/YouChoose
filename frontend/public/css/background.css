@@ -14,7 +14,7 @@
     background-size: cover;
 }
 
-.all-buttons {
+/* .all-buttons {
     color: white;
     background-color: thistle;
     z-index: 9;
@@ -24,12 +24,13 @@
     align-items: center;
     text-align: center;
     font-size: 40px;
-}
+} */
 
 .breakfast-button {
     display: block;
-    width: 100%;
+    width: 30%;
     height: 70px;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -39,8 +40,9 @@
 
 .lunch-button {
     display: block;
-    width: 100%;
+    width: 30%;
     height: 70px;
+    text-align: center;
     cursor: pointer;
 }
 
@@ -50,8 +52,9 @@
 
 .dinner-button {
     display: block;
-    width: 100%;
+    width: 30%;
     height: 70px;
+    text-align: center;
     cursor: pointer;
 }
 

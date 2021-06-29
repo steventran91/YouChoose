@@ -40,11 +40,11 @@ class Restaurant extends React.Component {
     } else {
       return (
         <div>
-          
+
         </div>
       )
     }
+
   }
 }
-
 export default Restaurant;

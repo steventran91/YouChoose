@@ -1,9 +1,10 @@
 import {
   RECEIVE_CURRENT_USER,
   RECEIVE_USER_LOGOUT,
-  RECEIVE_USER_SIGN_IN,
+  //RECEIVE_USER_SIGN_IN,
   RECEIVE_LOCATION,
-  RECEIVE_CUISINE
+  RECEIVE_CUISINE,
+  RECEIVE_TAG,
 } from "../actions/session_actions";
 
 const initialState = {
@@ -12,7 +13,7 @@ const initialState = {
     location: "sanfrancisco"
 };
 
-export default function (state = initialState, action) {
+export default function sessionApiReducer (state = initialState, action) {
     switch (action.type) {
         case RECEIVE_CURRENT_USER:
             return {
@@ -35,6 +36,11 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 cuisine: action.cuisine
+            };
+        case RECEIVE_TAG:
+            return {
+                ...state,
+                tag: action.tag
             };
         default:
             return state;

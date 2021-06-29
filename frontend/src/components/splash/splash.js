@@ -25,9 +25,10 @@ import pic1 from "./images/Everything-Hurts-And-Im-Hungry-Graphics-4570931-1.jpg
 import pic2 from "./images/Hello-Im-hungry-svg-for-cricut-Graphics-4450005-1.png"
 
 class SplashPage extends React.Component {
-    constructor(props) {
-        super(props)
-    }
+
+    // constructor(props) {
+    //     super(props)
+    // }
 
     render() {
         return (
@@ -47,8 +48,8 @@ class SplashPage extends React.Component {
                 <div className="splash-middle">
                     <SplashCenter props={this.props} />
                     <div className="splash-pics">
-                        <img className="pic1" src={`${pic1}`}></img>
-                        <img className="pic2" src={`${pic2}`}></img>
+                        <img className="pic1" src={`${pic1}`} alt="pic1"></img>
+                        <img className="pic2" src={`${pic2}`} alt="pic2"></img>
                     </div>
                 </div>
                 <br />

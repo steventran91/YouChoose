@@ -1,6 +1,7 @@
 import React from 'react';
 import RestaurantContainer from './restaurants_container';
 
+
 class RestaurantList extends React.Component {
     constructor(props) {
         super(props);
@@ -9,29 +10,42 @@ class RestaurantList extends React.Component {
             activated: false
         }
         this.handleIndex = this.handleIndex.bind(this);
-        // this.helperFavorite = this.helperFavorite.bind(this);
+        this.handleRandom = this.handleRandom.bind(this);
+
+        // this.setRating = this.setRating.bind(this);
     }
 
-    componentDidMount(){
+    componentDidMount() {
+        // debugger
         let cuisine = this.props.cuisine
-        let region = this.props.region
-        this.props.fetchRestaurantsByCuisine({cuisine: cuisine, location: region});
+        let location = this.props.region
+        let tag = this.props.tag
+        this.props.fetchRestaurantsByCuisine({tag, cuisine, location});
     }
+
+ 
 
     componentDidUpdate() {
         console.log(this.props.cuisine)
     }
 
-    handleIndex(index){
+    handleIndex(index) {
         return e => {
             e.preventDefault();
-            this.setState({index})
+            this.setState({ index })
         }
     }
+    handleRandom(e){
+        e.preventDefault();
+        this.setState({ index: Math.floor(Math.random() * Object.values(this.props.restaurants).length)})
+    }
 
-    // helperFavorite(){
-    //     this.setState({index: 0})
+    // setRating(rating) {
+    //     { document.getElementsByClassName(`.stars-inner`).style.width = rating }
     // }
+
+    render() {
+        // document.getElementsByClassName(`.stars-inner`).style.width = this.props.restaurant.rating
 
     handleFavorites(e){
         e.preventDefault()
@@ -41,8 +55,6 @@ class RestaurantList extends React.Component {
         })
     }
 
-    
-
     render(){
         if (this.props.restaurants && !this.state.activated) {
             return(
@@ -51,12 +63,20 @@ class RestaurantList extends React.Component {
                     <ul className="restaurant-list">
                         {Object.values(this.props.restaurants).map((restaurant, index) => {
                             // return <RestaurantContainer restaurant={restaurant} />
-                            return <li 
-                                    className={this.state.index === index ? "active" : ""}
-                                    onClick={this.handleIndex(index)}
-                                    key={index}>
-                                        {restaurant.name}
-                                    </li>
+                            return <li
+                                className={this.state.index === index ? "active" : ""}
+                                onClick={this.handleIndex(index)}
+                                key={index}>
+                                {restaurant.name}
+                                <br />
+                                <div className="star-ratings">
+                                    <div className="star-ratings-css-product">
+                                        <div className="star-ratings-css-product-top" style={{ width: `${parseFloat(restaurant.rating).toFixed(1) * 0.83}em` }}><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                        <div className="star-ratings-css-product-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+                                    </div>
+                                </div>
+                                {restaurant.rating}
+                            </li>
                         })}
                     </ul>
                     <div className="restaurant-show">
@@ -109,8 +129,5 @@ class RestaurantList extends React.Component {
         
     }
 }
-
-
-
 
 export default RestaurantList;
