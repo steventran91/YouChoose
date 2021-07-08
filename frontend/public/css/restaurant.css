@@ -49,6 +49,7 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .restaurant-list {
@@ -79,6 +80,17 @@
     height: 80%;
     width: 80%;
     float: right;
+}
+
+.restaurant-template p {
+    padding: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.restaurant-template a {
+    padding: 7px;
+    text-decoration: underline;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .fav-button-act{
@@ -163,7 +175,7 @@
     background-color: rgb(212, 212, 212);
     text-align: center;
     margin-top: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
 }
 
