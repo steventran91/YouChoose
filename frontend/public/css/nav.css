@@ -191,6 +191,7 @@
 .signup-form-header {
     font-size: 40px;
     font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .signup-form-container {
@@ -255,7 +256,7 @@
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: groove;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 225);
 }
 
 .signup-input {
@@ -271,13 +272,20 @@
 }
 
 .policy-paragraph {
-    font-size: 16px;
+    padding: 5px;
+    font-size: 18px;
     width: 350px;
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(255, 255, 255);
+    color: white;
+    border-radius: 3px;
+    background-color: rgb(241, 182, 182);
+    border-color: rgb(233, 166, 166);
+    box-shadow: 1px 1px 5px lightgrey;
     opacity: 90%;
+    font-family: Didot;
+    
 }
 
 .session-submit {
@@ -291,7 +299,7 @@
     background-color: rgb(241, 182, 182);
     color: #fff;
     box-shadow: 1px 1px 5px lightgrey;
-    font-family: Didot, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
 }
 
 .session-submit:hover {
@@ -326,6 +334,7 @@ ul {
     background-color: rgb(241, 182, 182);
     color: #fff;
     box-shadow: 1px 1px 5px lightgrey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .demo-login:hover {

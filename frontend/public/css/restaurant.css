@@ -49,6 +49,7 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 /* .restaurant-list {
@@ -123,6 +124,17 @@
 .restaurant-title{
     font-size: xx-large;
     font-weight: 700;
+}
+
+.restaurant-template p {
+    padding: 5px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.restaurant-template a {
+    padding: 7px;
+    text-decoration: underline;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .fav-button-act{
@@ -233,6 +245,8 @@
     text-align: center;
     /* margin-top: 20px; */
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    /* margin-top: 20px; */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
