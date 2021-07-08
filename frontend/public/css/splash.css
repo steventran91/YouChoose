@@ -1,25 +1,3 @@
-/* [data-component="slideshow"] .slide {
-	display: none;
-  text-align: center;
-}
-
-[data-component="slideshow"] .slide.active {
-	display: block;
-}
-
-img {
-    width: 600px;
-    height: 600px;
-}
-
-.slide-show {
-    border-style: solid;
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    margin-left: 200px;
-    margin-right: 200px;
-} */
 
 .slideshow {
     min-width: 800px;

@@ -32,46 +32,46 @@ class SplashPage extends React.Component {
 
     render() {
         return (
-            <div className="splash" >
-                <SlideShow interval={4000}
-                    images={[
-                        image1,
-                        breakfast,
-                        lunch2,
-                        breakfast1,
-                    ]} />
-                {/* <div className="splash-main">
+                <div className="splash" >
+                    <SlideShow interval={4000}
+                        images={[
+                            image1,
+                            breakfast,
+                            lunch2,
+                            breakfast1,
+                        ]} />
+                    {/* <div className="splash-main">
                     <div className="splash-text">
                         SPLASH PAGE
                     </div>
                 </div> */}
-                <div className="splash-middle">
-                    <SplashCenter props={this.props} />
-                    <div className="splash-pics">
-                        <img className="pic1" src={`${pic1}`} alt="pic1"></img>
-                        <img className="pic2" src={`${pic2}`} alt="pic2"></img>
+                    <div className="splash-middle">
+                        <SplashCenter props={this.props} />
+                        <div className="splash-pics">
+                            <img className="pic1" src={`${pic1}`} alt="pic1"></img>
+                            <img className="pic2" src={`${pic2}`} alt="pic2"></img>
+                        </div>
                     </div>
+                    <br />
+                    <FoodGallery interval={2500} images={[
+                        food1,
+                        food2,
+                        food3,
+                        food4,
+                        food5,
+                        food6,
+                        food7,
+                        food8,
+                        food9,
+                        food10,
+                        food11,
+                        food12,
+                    ]} />
+                    <br />
+                    <SplashBottom props={this.props} />
+                    <br />
+                    <hr />
                 </div>
-                <br />
-                <FoodGallery interval={2500} images={[
-                    food1,
-                    food2,
-                    food3,
-                    food4,
-                    food5, 
-                    food6, 
-                    food7, 
-                    food8, 
-                    food9, 
-                    food10, 
-                    food11, 
-                    food12,
-                ]} />
-                <br />
-                <SplashBottom props={this.props} />
-                <br />
-                <hr />
-            </div>
         )
     }
 }
