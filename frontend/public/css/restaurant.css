@@ -81,6 +81,15 @@
     float: right;
 }
 
+.restaurant-template p {
+    padding: 5px;
+}
+
+.restaurant-template a {
+    padding: 7px;
+    text-decoration: underline;
+}
+
 .fav-button-act{
     background-color: yellow;
     position: relative;
