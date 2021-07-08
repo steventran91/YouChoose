@@ -28,13 +28,22 @@ class Restaurant extends React.Component {
     if (this.props.restaurant) {
       return (
         <div className="restaurant-template">
-          <a href={this.props.restaurant.url} target="_blank">Go to Yelp: {this.props.restaurant.name}</a>
-          <p>Phone: {this.props.restaurant.phone}</p>
-          <p>Address: {this.props.restaurant.location.display_address}</p>
-          <p>Price: {this.props.restaurant.price}</p>
-          <p>Rating: {this.props.restaurant.rating}</p>
-          <img src={this.props.restaurant.image_url} />
-          <button className={this.props.currentUser.favorites[this.props.restaurant.id] ? "fav-button-act" : "fav-but"} onClick={(e => this.addToFavorite(e))}></button>
+          <div className="inner-rest-template">
+            <img src={this.props.restaurant.image_url} />
+            <div className="restaurant-info">
+              <div className="fav-but-container">
+                <button className={this.props.currentUser.favorites[this.props.restaurant.id] ? "fav-button-act" : "fav-but"} onClick={(e => this.addToFavorite(e))}></button>
+              </div>
+              <div className="restaurant-info-right">
+                <h1 className="restaurant-title">{this.props.restaurant.name}</h1>
+                <a className="yelp-page-link" href={this.props.restaurant.url} target="_blank">Go to {this.props.restaurant.name} Yelp Page!</a>
+                <p>Phone: {this.props.restaurant.phone}</p>
+                <p>Address: {this.props.restaurant.location.display_address}</p>
+                <p>Price: {this.props.restaurant.price}</p>
+                <p>Rating: {this.props.restaurant.rating}</p>
+              </div>
+            </div>
+          </div>
         </div>
       );
     } else {
