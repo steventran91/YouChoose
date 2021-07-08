@@ -197,6 +197,10 @@
     margin-left: 322px;
 }
 
+.login-form-box {
+    background: rgba(0, 0, 0, 0.5);
+}
+
 .login-input {
     width: 300px;
     box-sizing: border-box;
@@ -206,7 +210,7 @@
     border-right-style: hidden;
     border-left-style: hidden;
     border-bottom-style: groove;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 225);
 }
 
 .signup-input {
@@ -227,7 +231,8 @@
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(255, 255, 255);
+    color: white;
+    background-color: lightpink;
     opacity: 90%;
 }
 
