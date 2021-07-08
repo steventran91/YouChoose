@@ -30,13 +30,15 @@ class Restaurant extends React.Component {
         <div className="restaurant-template">
           <div className="inner-rest-template">
             <img src={this.props.restaurant.image_url} />
-            <div>
-            <a href={this.props.restaurant.url} target="_blank">Go to Yelp: {this.props.restaurant.name}</a>
-            <p>Phone: {this.props.restaurant.phone}</p>
-            <p>Address: {this.props.restaurant.location.display_address}</p>
-            <p>Price: {this.props.restaurant.price}</p>
-            <p>Rating: {this.props.restaurant.rating}</p>
-            <button className={this.props.currentUser.favorites[this.props.restaurant.id] ? "fav-button-act" : "fav-but"} onClick={(e => this.addToFavorite(e))}></button>
+            <div className="restaurant-info">
+              <div className="fav-but-container">
+                <button className={this.props.currentUser.favorites[this.props.restaurant.id] ? "fav-button-act" : "fav-but"} onClick={(e => this.addToFavorite(e))}></button>
+              </div>
+              <a href={this.props.restaurant.url} target="_blank">Go to Yelp: {this.props.restaurant.name}</a>
+              <p>Phone: {this.props.restaurant.phone}</p>
+              <p>Address: {this.props.restaurant.location.display_address}</p>
+              <p>Price: {this.props.restaurant.price}</p>
+              <p>Rating: {this.props.restaurant.rating}</p>
             </div>
           </div>
         </div>
