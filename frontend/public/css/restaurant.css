@@ -59,6 +59,7 @@
 
 .restaurant-list li:hover{
     background-color: rgb(255, 208, 208);
+    color: grey;
 }
 
 .restaurant-list li.active{
@@ -124,6 +125,7 @@
 .restaurant-title{
     font-size: xx-large;
     font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .restaurant-template p {
@@ -254,6 +256,7 @@
 
 .favorites-button:hover{
     background-color: rgb(255, 208, 208);
+    color: grey;
 }
 
 .temp-left {

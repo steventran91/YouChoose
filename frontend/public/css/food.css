@@ -47,6 +47,11 @@ section.food-gallery section.slide div.slide-thumbnail {
     box-shadow: 5px 5px 6px #b87de99c;
 }
 
+.slideshow-controller{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1.5px 1.5px #12191f;
+}
+
 section.food-gallery div.slideshow-controller {
     background: #c3f3ff;
     display: flex;

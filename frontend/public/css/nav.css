@@ -1,3 +1,6 @@
+button {
+     text-shadow: 1.5px 1.5px #12191f;
+}
 .navbar {
     display: flex;
     position: static;
@@ -77,6 +80,7 @@
     font-weight: 100;
     text-align: center;
     vertical-align: baseline;
+    text-shadow: 1.5px 1.5px #12191f;
     margin-right: 15px;
     color: rgb(255, 255, 255);
     border-color: rgb(233, 166, 166);
@@ -104,6 +108,7 @@
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
     width: 120px;
+    text-shadow: 1.5px 1.5px #12191f;
     margin-right: 20px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -113,15 +118,14 @@
 }
 
 .logout-button {
-    align-items: flex-end;
-    position: flex;
-    width: 110px;
-    margin-right: 50px;
-    padding: 5px 12px 14px 11px;
+  width: 140px;
+    height: 25px;
+    margin-right: 20px;
+    padding: 2px 12px 10px 11px;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 28px;
+    font-size: 20px;
     line-height: 20px;
     text-align: center;
     vertical-align: baseline;
@@ -129,8 +133,8 @@
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    height: 30px;
-    margin-top: 7px;
+    margin-top: 10px;
+    margin-bottom: 2px;
 }
 
 .logout-button:hover {
@@ -163,25 +167,24 @@
 
 
 .home-button {
-    align-items: flex-end;
-    margin-left: 10px;
-    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    width: 140px;
+    height: 25px;
+    margin-right: 20px;
+    padding: 2px 12px 10px 11px;
+    border: 1px solid #e5e5e5;
     border-radius: 10px;
-    font-size: 35px;
+    cursor: pointer;
+    font-size: 20px;
     line-height: 20px;
-    text-decoration: none;
-    font-weight: 100;
     text-align: center;
     vertical-align: baseline;
-    width: 136px;
     color: white;
-    margin-right: 100px;
+    text-shadow: 1.5px 1.5px #12191f;
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
-    width: 100px;
-    height: 40px;
-    padding: 10px 8px 2px 8px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10px;
+    margin-bottom: 2px;
 }
 
 .home-button:hover {
@@ -217,10 +220,14 @@
     margin-top: 10px;
     border-radius: 5px;
     border-bottom-left-radius: 5px;
-    height: 860px;
+    height: 900px;
     margin-right: 322px;
     margin-left: 322px;
 }
+
+/* .login-form {
+    height: max-content;
+} */
 
 .background {
     display: flex;
@@ -229,7 +236,7 @@
 
 .login-entire-box {
     width: 400px;
-    height: 450px;
+    height: 500px;
     background-color: rgb(255, 255, 241);
     align-items: center;
     border-radius: 10px;
@@ -238,7 +245,7 @@
 
 .signup-entire-box {
     width: 410px;
-    height: 460px;
+    height: 550px;
     background-color: rgb(255, 255, 241);
     align-items: center;
     border-radius: 10px;
@@ -275,7 +282,9 @@
     padding: 5px;
     font-size: 18px;
     width: 350px;
-    font-weight: bold;
+    /* font-weight: 700; */
+    letter-spacing: 1px;
+    text-shadow: 1.5px 1.5px #12191f;
     margin-left: auto;
     margin-right: auto;
     color: white;
@@ -284,7 +293,7 @@
     border-color: rgb(233, 166, 166);
     box-shadow: 1px 1px 5px lightgrey;
     opacity: 90%;
-    font-family: Didot;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     
 }
 
@@ -298,6 +307,7 @@
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
     color: #fff;
+     text-shadow: 1.5px 1.5px #12191f;
     box-shadow: 1px 1px 5px lightgrey;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
 }
@@ -333,6 +343,7 @@ ul {
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
     color: #fff;
+    text-shadow: 1.5px 1.5px #12191f;
     box-shadow: 1px 1px 5px lightgrey;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }

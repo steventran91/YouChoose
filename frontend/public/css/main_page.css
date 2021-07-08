@@ -3,6 +3,8 @@
 }
 
 .main-button-holder{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 1.5px 1.5px #12191f;
     display: flex;
     position: absolute;
     /* bottom: -50px; */
