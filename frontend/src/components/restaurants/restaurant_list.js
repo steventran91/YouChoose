@@ -37,7 +37,13 @@ class RestaurantList extends React.Component {
     }
     handleRandom(e){
         e.preventDefault();
-        this.setState({ index: Math.floor(Math.random() * Object.values(this.props.restaurants).length)})
+        if(this.state.activated){
+          // console.log(this.props.currentUser);
+          this.setState({ index: Math.floor(Math.random() * Object.values(this.props.currentUser.favorites).length)})
+        }else{
+          
+          this.setState({ index: Math.floor(Math.random() * Object.values(this.props.restaurants).length)})
+        }
     }
 
     // setRating(rating) {
@@ -60,6 +66,7 @@ class RestaurantList extends React.Component {
             return(
                 <div className="restaurant-page">
                     <button className="favorites-button" onClick={e => this.handleFavorites(e)}>Favorites</button>
+                <button className="favorites-button" onClick={this.handleRandom}>You Choose</button>
                     <ul className="restaurant-list">
                         {Object.values(this.props.restaurants).map((restaurant, index) => {
                             // return <RestaurantContainer restaurant={restaurant} />
@@ -91,6 +98,8 @@ class RestaurantList extends React.Component {
                 <button className="favorites-button" onClick={(e) => this.handleFavorites(e)}>
                   Restaurant List
                 </button>
+
+                <button className="favorites-button" onClick={this.handleRandom}>You Choose</button>
                 <ul className="restaurant-list">
                   {Object.values(this.props.favoriteRestaurants).map(
                     (restaurant, index) => {
