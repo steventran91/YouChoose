@@ -67,9 +67,9 @@ class NavBar extends React.Component {
           </Link>
         </div>
         <div className="navbar-mid">
-          <h1 className="youchoose">
+          <div className="youchoose">
             <img src={logo}></img>
-          </h1>
+          </div>
         </div>
 
         <div className="navbar-right">{display}</div>
