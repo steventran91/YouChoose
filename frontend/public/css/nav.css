@@ -191,6 +191,7 @@
 .signup-form-header {
     font-size: 40px;
     font-weight: 700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .signup-form-container {
@@ -283,6 +284,8 @@
     border-color: rgb(233, 166, 166);
     box-shadow: 1px 1px 5px lightgrey;
     opacity: 90%;
+    font-family: Didot;
+    
 }
 
 .session-submit {
@@ -296,7 +299,7 @@
     background-color: rgb(241, 182, 182);
     color: #fff;
     box-shadow: 1px 1px 5px lightgrey;
-    font-family: Didot, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
 }
 
 .session-submit:hover {
@@ -331,6 +334,7 @@ ul {
     background-color: rgb(241, 182, 182);
     color: #fff;
     box-shadow: 1px 1px 5px lightgrey;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .demo-login:hover {
