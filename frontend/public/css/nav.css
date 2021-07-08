@@ -2,7 +2,7 @@
     display: flex;
     position: static;
     width: 100%;
-    height: 70px;
+    height: 90px;
     margin: 10 auto;
     align-items: center;
     justify-content: space-between;
@@ -12,9 +12,20 @@
     border-color: rgb(143, 202, 251);
 }
 
-.youchoose {
+/* .youchoose {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 40px;
+} */
+
+.youchoose {
+    display: flex;
+    flex-direction: column;
+}
+
+.youchoose > img {
+    padding-bottom: 45px;
+    height: 280px;
+    width: 250px;
 }
 
 .navbar-left {
@@ -23,6 +34,7 @@
     display: flex;
     align-items: center;
     padding-left: 20px;
+    vertical-align: middle;
 }
 
 .navbar-right {
@@ -30,7 +42,17 @@
     text-align: center;
     display: flex;
     align-items: center;
-    
+    vertical-align: middle;
+}
+
+.navbar > .navbar-mid {
+    color: white;
+    text-align: center;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    margin: 0 auto;
+    width: 100px;
 }
 
 .login-buttons {
@@ -46,10 +68,10 @@
     align-items: flex-end;
     font-weight: 100;
     text-decoration: none;
-    padding: 4px 11px 2px 10px;
+    padding: 5px 12px 6px 11px;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 20px;
     white-space: nowrap;
     font-weight: 100;
@@ -59,7 +81,7 @@
     color: rgb(255, 255, 255);
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
-    font-family: Didot, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .login-button:hover {
@@ -68,7 +90,7 @@
 
 .signup-button {
     align-items: flex-end;
-    padding: 5px 11px 2px 10px;
+    padding: 5px 12px 6px 11px;
     cursor: pointer;
     font-size: 25px;
     border-radius: 10px;
@@ -82,8 +104,8 @@
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
     width: 120px;
-    margin-right: 10px;
-    font-family: Didot, serif;
+    margin-right: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .signup-button:hover {
@@ -95,18 +117,18 @@
     position: flex;
     width: 110px;
     margin-right: 50px;
-    padding: 3px 11px 2px 8px;
+    padding: 5px 12px 14px 11px;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 25px;
+    font-size: 28px;
     line-height: 20px;
     text-align: center;
     vertical-align: baseline;
     color: white;
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
-    font-family: Didot, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     height: 30px;
     margin-top: 7px;
 }
@@ -119,17 +141,18 @@
     width: 140px;
     height: 25px;
     margin-right: 20px;
+    padding: 2px 12px 10px 11px;
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 20px;
     line-height: 20px;
     text-align: center;
     vertical-align: baseline;
     color: white;
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
-    font-family: Didot, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin-top: 10px;
     margin-bottom: 2px;
 }
@@ -142,10 +165,9 @@
 .home-button {
     align-items: flex-end;
     margin-left: 10px;
-    padding: 4px 2px 5px 1px;
     cursor: pointer;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 35px;
     line-height: 20px;
     text-decoration: none;
     font-weight: 100;
@@ -156,8 +178,10 @@
     margin-right: 100px;
     border-color: rgb(233, 166, 166);
     background-color: rgb(241, 182, 182);
-    width: 90px;
-    font-family: Didot, serif;
+    width: 100px;
+    height: 40px;
+    padding: 10px 8px 2px 8px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .home-button:hover {
@@ -197,8 +221,29 @@
     margin-left: 322px;
 }
 
-.login-form-box {
-    background: rgba(0, 0, 0, 0.5);
+.background {
+    display: flex;
+    justify-content: center;
+}
+
+.login-entire-box {
+    width: 400px;
+    height: 450px;
+    background-color: rgb(255, 255, 241);
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 100px;
+}
+
+.signup-entire-box {
+    width: 410px;
+    height: 460px;
+    background-color: rgb(255, 255, 241);
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding-top: 10px;
+    padding-bottom: 500px;
 }
 
 .login-input {
@@ -226,8 +271,8 @@
 }
 
 .policy-paragraph {
-    font-size: 14px;
-    width: 500px;
+    font-size: 16px;
+    width: 350px;
     font-weight: bold;
     margin-left: auto;
     margin-right: auto;
