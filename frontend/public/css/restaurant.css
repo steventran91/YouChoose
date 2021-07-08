@@ -78,6 +78,7 @@
 }
 
 .inner-rest-template{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -89,20 +90,39 @@
 }
 
 .restaurant-template img{
-    height: 60%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     border-radius: 20px;
     /* float: right; */
 }
 
 .restaurant-info{
+    position: absolute;
     background-color: #c3f3ff;
+    background-color: rgba(255,	255, 255, 0.9);
     display: flex;
+    justify-content: space-around;
     margin-top: 10px;
-    width: 90%;
-    height: 30%;
+    bottom: 30px;
+    left: 30px;
+    width: max-content;
+    height: max-content;
     padding: 20px;
     border-radius: 10px;
+}
+
+.restaurant-info-right{
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    justify-content: center;
+    /* align-items: center; */
+    margin-left: 20px;
+}
+
+.restaurant-title{
+    font-size: xx-large;
+    font-weight: 700;
 }
 
 .fav-button-act{
@@ -283,5 +303,10 @@
     width: 100%;
     justify-content: space-around;
     /* background-color: yellow; */
+}
+
+.yelp-page-link{
+    color: blue;
+    text-decoration: underline;
 }
 
