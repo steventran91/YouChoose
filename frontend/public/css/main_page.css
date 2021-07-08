@@ -1,3 +1,7 @@
+.main-container {
+    height: auto;
+}
+
 .main-button-holder{
     display: flex;
     position: absolute;
