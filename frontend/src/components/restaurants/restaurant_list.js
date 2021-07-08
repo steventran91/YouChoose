@@ -65,8 +65,11 @@ class RestaurantList extends React.Component {
         if (this.props.restaurants && !this.state.activated) {
             return(
                 <div className="restaurant-page">
-                    <button className="favorites-button" onClick={e => this.handleFavorites(e)}>Favorites</button>
-                <button className="favorites-button" onClick={this.handleRandom}>You Choose</button>
+                  <div className="left-sidebar">
+                    <div className="button-container">
+                      <button className="favorites-button" onClick={e => this.handleFavorites(e)}>Favorites</button>
+                      <button className="favorites-button" onClick={this.handleRandom}>You Choose</button>
+                    </div>
                     <ul className="restaurant-list">
                         {Object.values(this.props.restaurants).map((restaurant, index) => {
                             // return <RestaurantContainer restaurant={restaurant} />
@@ -86,6 +89,7 @@ class RestaurantList extends React.Component {
                             </li>
                         })}
                     </ul>
+                  </div>
                     <div className="restaurant-show">
                         <RestaurantContainer restaurant={Object.values(this.props.restaurants)[this.state.index]}  />
                     </div>
@@ -95,27 +99,30 @@ class RestaurantList extends React.Component {
         else if (this.state.activated) {
             return (
               <div className="restaurant-page">
-                <button className="favorites-button" onClick={(e) => this.handleFavorites(e)}>
-                  Restaurant List
-                </button>
-
-                <button className="favorites-button" onClick={this.handleRandom}>You Choose</button>
-                <ul className="restaurant-list">
-                  {Object.values(this.props.favoriteRestaurants).map(
-                    (restaurant, index) => {
-                      // return <RestaurantContainer restaurant={restaurant} />
-                      return (
-                        <li
-                          className={this.state.index === index ? "active" : ""}
-                          onClick={this.handleIndex(index)}
-                          key={index}
-                        >
-                          {restaurant.name}
-                        </li>
-                      );
-                    }
-                  )}
-                </ul>
+                <div className="left-sidebar">
+                  <div className="button-container">
+                    <button className="favorites-button" onClick={(e) => this.handleFavorites(e)}>
+                      Restaurant List
+                    </button>
+                    <button className="favorites-button" onClick={this.handleRandom}>You Choose</button>
+                  </div>
+                  <ul className="restaurant-list">
+                    {Object.values(this.props.favoriteRestaurants).map(
+                      (restaurant, index) => {
+                        // return <RestaurantContainer restaurant={restaurant} />
+                        return (
+                          <li
+                            className={this.state.index === index ? "active" : ""}
+                            onClick={this.handleIndex(index)}
+                            key={index}
+                          >
+                            {restaurant.name}
+                          </li>
+                        );
+                      }
+                    )}
+                  </ul>
+                </div>
                 <div className="restaurant-show">
                   <RestaurantContainer
                     

@@ -54,7 +54,8 @@
     box-shadow: 0 0 4px rgb(233, 166, 166);
     border-radius: 5px;
     padding: 5px;
-    font-family: Didot, serif;
+    text-shadow: 1.5px 1.5px #12191f;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     position: absolute;
     font-weight: 700;
     top: 320px;
