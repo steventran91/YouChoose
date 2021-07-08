@@ -3,7 +3,6 @@ button {
 }
 .navbar {
     display: flex;
-    position: static;
     width: 100%;
     height: 90px;
     margin: 10 auto;
@@ -15,20 +14,22 @@ button {
     border-color: rgb(143, 202, 251);
 }
 
+.navbar > div {
+    width: calc(100%/3);
+}
+
 /* .youchoose {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 40px;
 } */
 
-.youchoose {
-    display: flex;
-    flex-direction: column;
-}
-
 .youchoose > img {
     padding-bottom: 45px;
-    height: 280px;
-    width: 250px;
+    height: 270px;
+    margin: 0 auto;
+    text-align: center;
+    width: 265px;
+    object-fit: cover;
 }
 
 .navbar-left {
@@ -45,26 +46,24 @@ button {
     text-align: center;
     display: flex;
     align-items: center;
+    padding-left: 200px;
     vertical-align: middle;
+    text-align: center;
 }
 
-.navbar > .navbar-mid {
+.navbar-mid {
     color: white;
     text-align: center;
     display: block;
     margin-left:auto;
     margin-right:auto;
     margin: 0 auto;
-    width: 100px;
+    width: 100%;
 }
 
 .login-buttons {
     display: flex;
     flex-direction: row;
-}
-
-.loggedin-right {
-    display: flex;
 }
 
 .login-button {
@@ -122,6 +121,7 @@ button {
     height: 25px;
     margin-right: 20px;
     padding: 2px 12px 10px 11px;
+
     border: 1px solid #e5e5e5;
     border-radius: 10px;
     cursor: pointer;
