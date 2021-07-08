@@ -22,14 +22,14 @@
 }
 
 .restaurant-list {
-    background-color: #c3f3ff;
+    /* background-color: #c3f3ff; */
     padding: 5px;
     border-radius: 5px;
-    height: 85vh;
+    height: 75vh;
     margin: 10px;
     overflow-y: scroll;
     color: white;
-    width: 400px;
+    width: 300px;
 }
 
 .restaurant-list li{
@@ -51,10 +51,10 @@
     flex-direction: column;
 }
 
-.restaurant-list {
+/* .restaurant-list {
     width: 300px;
     float: left;
-}
+} */
 
 .restaurant-list li:hover{
     background-color: rgb(255, 208, 208);
@@ -66,22 +66,37 @@
 
 .restaurant-template{
     background-color: #c3f3ff;
-    padding: 5px;
+    padding: 20px;
     border-radius: 5px;
-    height: 85vh;
-    width: 60vw;
-    margin: 10px;
+    height: 88vh;
+    width: 75vw;
+    margin: 20px;
+    margin-bottom: 10px;
     overflow-y: scroll;
     color: rgb(34, 34, 34)
+
+}
+
+.inner-rest-template{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: rgb(241, 182, 182);
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .restaurant-template img{
-    height: 80%;
-    width: 80%;
-    float: right;
+    height: 60%;
+    width: 90%;
+    border-radius: 20px;
+    /* float: right; */
 }
 
 .fav-button-act{
+    cursor: pointer;
     background-color: yellow;
     position: relative;
     width: 50px;
@@ -120,6 +135,7 @@
 }
 
 .fav-but{
+    cursor: pointer;
     background-color: crimson;
     position: relative;
     width: 50px;
@@ -158,13 +174,36 @@
 }
 
 .favorites-button {
+    cursor: pointer;
+    background-color: rgb(241, 182, 182);
+    text-shadow: 2px 2px 4px black;
+    box-shadow: 2px 2px 4px black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 20px;
+    margin-bottom: 10px;
+    /* height: 12vh; */
+    text-align: center;
+    font-size: 22px;
+    color: rgb(236, 236, 236);
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-content: center; */
+    /* flex-direction: column; */
+
     height: 80px;
     width: 120px;
-    background-color: rgb(212, 212, 212);
+    /* background-color: rgb(212, 212, 212); */
     text-align: center;
-    margin-top: 20px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* margin-top: 20px; */
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.favorites-button:hover{
+    background-color: rgb(255, 208, 208);
 }
 
 .temp-left {
@@ -207,4 +246,26 @@
       z-index: 0;
 }
   
+.left-sidebar{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 88vh;
+    background-color: #c3f3ff;
+    margin: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    /* align-self: center; */
+    /* background-color: yellowgreen; */
+    /* width: 30%; */
+    /* background-color: yellowgreen; */
+}
+
+.button-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    /* background-color: yellow; */
+}
 
