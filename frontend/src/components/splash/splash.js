@@ -23,6 +23,14 @@ import food11 from "./foods/food11.jpg"
 import food12 from "./foods/food12.jpg"
 import pic1 from "./images/Everything-Hurts-And-Im-Hungry-Graphics-4570931-1.jpg"
 import pic2 from "./images/Hello-Im-hungry-svg-for-cricut-Graphics-4450005-1.png"
+import slide1 from "./images/slideshow1.png"
+import slide2 from "./images/slideshow2.png"
+import slide3 from "./images/slides3.png"
+import slide4 from "./images/slides4.png"
+import slide5 from "./images/slides5.png"
+import slide6 from "./images/slides6.png"
+import slide7 from "./images/slides7.png"
+import slide8 from "./images/slides8.png"
 
 class SplashPage extends React.Component {
 
@@ -36,9 +44,14 @@ class SplashPage extends React.Component {
                     <SlideShow interval={4000}
                         images={[
                             image1,
-                            breakfast,
-                            lunch2,
-                            breakfast1,
+                            slide1,
+                            slide2,
+                            slide3,
+                            slide4,
+                            slide5,
+                            slide6,
+                            slide7,
+                            slide8,
                         ]} />
                     {/* <div className="splash-main">
                     <div className="splash-text">

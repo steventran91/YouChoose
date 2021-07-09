@@ -59,48 +59,6 @@ export default function Slideshow({ images = [], interval = 3000 }) {
         }
     }
 
-    //     render() {
-    //         var slideshows = document.querySelectorAll('[data-component="slideshow"]');
-    //         slideshows.forEach(initSlideShow);
-
-    //         function initSlideShow(slideshow) {
-    //             var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
-    //             var index = 0, time = 4000;
-    //             slides[index].classList.add('active');
-
-    //             setInterval(() => {
-    //                 slides[index].classList.remove('active');
-
-    //                 index++;
-    //                 if (index === slides.length) index = 0;
-
-    //                 slides[index].classList.add('active');
-
-    //             }, time);
-    //         }
-
-    //         // this.forceUpdate();
-
-    //         return (
-    //             <div className="slide-show" >
-    //                 <div id="slideshow-example" data-component="slideshow">
-    //                     <div role="list">
-    //                         <div class="slide">
-    //                             <img src="https://static.vecteezy.com/system/resources/previews/000/463/565/original/healthy-food-clipart-vector.jpg" alt="First Image"></img>
-    //                         </div>
-    //                         <div class="slide">
-    //                             <img src="https://i.ytimg.com/vi/krgkUXrOpvg/maxresdefault.jpg" alt="Second Image"></img>
-    //                         </div>
-    //                         <div class="slide">
-    //                             <img src="https://image.freepik.com/free-vector/panda-eat-pizza-slice-cartoon-illustration_138676-1500.jpg" alt="Third Image"></img>
-    //                         </div>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         )
-    //     }
-    // }
-
      return (
         <section className="slideshow">
             <div className="slide-holder">
