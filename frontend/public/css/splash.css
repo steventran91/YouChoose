@@ -55,8 +55,8 @@ section.slideshow section.current-slide {
 
 section.slideshow section.previous-slide,
 section.slideshow section.next-slide {
-    width: 180px;
-    height: 150px;
+    width: 360px;
+    height: 270px;
 }
 
 section.slideshow section.slide div.slide-thumbnail {
@@ -199,10 +199,11 @@ section.slideshow div.slideshow-controller span:active {
 }
 
 .splash-bottom {
+    align-items: center;
     border-radius: 10px;
     font-size: 20px;
     font-weight: 700;
-    min-width: 1000px;
+    min-width: 800px;
 }
 
 #splash-bottom {
